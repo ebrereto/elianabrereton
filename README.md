@@ -1,5 +1,17 @@
 # Eliana Brereton's Portfolio and Social Links 
 
+### Education
+MA Student in the Philosophy of Data Science program at the University of Guelph. 
+Thesis & MRP based program, currently enrolled, expected graduation 2025. 
+
+# Previous Education
+BA in Psychology (Co-op Honours Degree) from the University of Guelph.
+- Completed an undergraduate Honours Thesis in the ethicalities of AI & GAI usage in HR settings, under the supervision of Dr. Gus Skorburg.
+- 4.0 GPA throughout degree.
+
+### Work Experience
+
+
 ## Social Media / Contact
 -   [LinkedIn](https://www.linkedin.com/in/eliana-brereton-18495a205/) My LinkedIn profile.
 -   [X](https://x.com/BreretonEliana) My X profile (I rarely use this.)
