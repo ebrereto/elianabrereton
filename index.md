@@ -1,4 +1,4 @@
-# Eliana Brereton's portfolio and social links 
+# Eliana Brereton's Portfolio and Social Links 
 
 ## Social Media / Contact
 -   [LinkedIn](https://www.linkedin.com/in/eliana-brereton-18495a205/) My LinkedIn profile.
@@ -15,9 +15,3 @@
 -   [Twitch profile](https://www.twitch.tv) twitch profile (placeholder)
 
 -   [Articles written for UofG](https://medium.com) (placeholder)
-
-<style>
-  .footer {
-    display: none;
-  }
-</style>
