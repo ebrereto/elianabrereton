@@ -12,8 +12,8 @@ BA in Psychology (Co-op Honours Degree) from the University of Guelph.
 - 4.0 GPA throughout degree.
 
 ### Resume & CV
-- [Resume] (resume) My resumé.
-- [CV] (CV) My prfoessional & academic CV.
+- [Resume](www.google.com) My resumé.
+- [CV](www.google.com) My prfoessional & academic CV.
 
 
 ## Social Media / Contact
