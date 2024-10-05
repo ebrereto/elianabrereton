@@ -1,14 +1,14 @@
 # Portfolio and Social Links 
 
 ## Social Media / Contact
--   [LinkedIn](https://www.linkedin.com/in/eliana-brereton-18495a205/) My LinkedIn profile.
--   [X](https://x.com/BreretonEliana) My X profile (I rarely use this.)
--   [Github](https://github.com/ebrereto) My Github profile. 
--   [Email](eliana.brereton@gmail.com)
+-   [LinkedIn](https://www.linkedin.com/in/eliana-brereton-18495a205/) : My LinkedIn profile.
+-   [X](https://x.com/BreretonEliana) : My X profile (I rarely use this.)
+-   [Github](https://github.com/ebrereto) : My Github profile. 
+-   [Email](eliana.brereton@gmail.com) 
 
 ### Resume & CV
-- [Resume](www.google.com) My resumé.
-- [CV](www.google.com) My professional & academic CV.
+- [Resume](www.google.com) :  My resumé.
+- [CV](www.google.com) : My professional & academic CV.
  
 ### Education
 MA Student in the Philosophy of Data Science program at the University of Guelph. 
