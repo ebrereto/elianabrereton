@@ -13,7 +13,7 @@ BA in Psychology (Co-op Honours Degree) from the University of Guelph.
 
 ### Resume & CV
 - [Resume](www.google.com) My resumé.
-- [CV](www.google.com) My prfoessional & academic CV.
+- [CV](www.google.com) My professional & academic CV.
 
 
 ## Social Media / Contact
