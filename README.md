@@ -2,7 +2,9 @@
 
 ### Education
 MA Student in the Philosophy of Data Science program at the University of Guelph. 
-Thesis & MRP based program, currently enrolled, expected graduation 2025. 
+- Thesis & MRP based program.
+- Currently enrolled.
+- Expected graduation 2025. 
 
 #### Previous Education
 BA in Psychology (Co-op Honours Degree) from the University of Guelph.
