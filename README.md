@@ -20,7 +20,7 @@ BA in Psychology (Co-op Honours Degree) from the University of Guelph.
 -   [LinkedIn](https://www.linkedin.com/in/eliana-brereton-18495a205/) My LinkedIn profile.
 -   [X](https://x.com/BreretonEliana) My X profile (I rarely use this.)
 -   [Github](https://github.com/ebrereto) My Github profile. 
--   [Email](eliana.brereton@gmail.com) My email.
+-   [Email](eliana.brereton@gmail.com) 
 
 ## Current Projects / Research
 -   [placeholder](www.nasa.com) placeholder (for now)
