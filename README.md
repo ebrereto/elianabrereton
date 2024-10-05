@@ -4,7 +4,7 @@
 MA Student in the Philosophy of Data Science program at the University of Guelph. 
 Thesis & MRP based program, currently enrolled, expected graduation 2025. 
 
-# Previous Education
+#### Previous Education
 BA in Psychology (Co-op Honours Degree) from the University of Guelph.
 - Completed an undergraduate Honours Thesis in the ethicalities of AI & GAI usage in HR settings, under the supervision of Dr. Gus Skorburg.
 - 4.0 GPA throughout degree.
