@@ -11,7 +11,9 @@ BA in Psychology (Co-op Honours Degree) from the University of Guelph.
 - Completed an undergraduate Honours Thesis in the ethicalities of AI & GAI usage in HR settings, under the supervision of Dr. Gus Skorburg.
 - 4.0 GPA throughout degree.
 
-### Work Experience
+### Resume & CV
+- [Resume] (resume) My resumé.
+- [CV] (CV) My prfoessional & academic CV.
 
 
 ## Social Media / Contact
