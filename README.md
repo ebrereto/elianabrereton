@@ -5,7 +5,8 @@
 ## Social Media / Contact
 -   [LinkedIn](https://www.linkedin.com/in/eliana-brereton-18495a205/): My LinkedIn profile.
 -   [X](https://x.com/BreretonEliana): My X profile (I rarely use this.)
--   [Github](https://github.com/ebrereto): My Github profile. 
+-   [Github](https://github.com/ebrereto): My Github profile.
+  
 -   Email: eliana@brereton.me OR eliana.brereton@gmail.com.
 -               (Either is a valid means of contacting me).
 
