@@ -27,11 +27,7 @@
 * * *
 
 ## Current Projects / Research
--   [placeholder](www.nasa.com) placeholder (for now)
--   [placeholder](www.nasa.com) placeholder (for now)
+-   _Under Construction_
 
 ## Portfolio Stuff
--   [Objkt.com profile placeholder](https://objkt.com) objkt profile (placeholder)
--   [Twitch profile](https://www.twitch.tv) twitch profile (placeholder)
-
--   [Articles written for UofG](https://medium.com) (placeholder)
+-   _Under Construction_
