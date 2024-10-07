@@ -9,8 +9,8 @@
 -   Email: eliana@brereton.me / eliana.brereton@gmail.com.
 
 ### Resume & CV
-- [Resume](www.google.com):  My resumé.
-- [CV](www.google.com): My professional & academic CV.
+- [Resume](/img/resume.pdf):  My resumé.
+- [CV](/img/ElianaBrereton_CV.pdf): My professional & academic CV.
 
 * * *
 
