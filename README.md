@@ -15,12 +15,16 @@
 * * *
 
 ### Education
-**M.A., Philosophy of Data Science | University of Guelph** (_Sept. 2024 - Current_)
+**M.A., Philosophy of Data Science | University of Guelph** 
+(_Sept. 2024 - Current_)
 - Thesis & MRP based program.
 - Expected graduation 2025. 
 
+* * *
+
 #### Previous Education
-**B.A., Psychology (Co-op Honours Degree) | University of Guelph.** (_Sept. 2019 - Apr. 2024_)
+**B.A., Psychology (Co-op Honours Degree) | University of Guelph.** 
+(_Sept. 2019 - Apr. 2024_)
 - Completed an undergraduate Honours Thesis in the ethicalities of AI & GAI usage in HR settings, under the supervision of Dr. Gus Skorburg.
 - 4.0 GPA throughout degree.
 
@@ -28,6 +32,8 @@
 
 ## Current Projects / Research
 -   _Under Construction_
+
+* * *
 
 ## Portfolio Stuff
 -   _Under Construction_
