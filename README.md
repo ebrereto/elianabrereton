@@ -22,6 +22,7 @@
 - Thesis & MRP based program.
 - Expected graduation 2025. 
 
+* * *
 #### Previous Education
 **B.A., Psychology (Co-op Honours Degree) | University of Guelph.** 
 (_Sept. 2019 - Apr. 2024_)
