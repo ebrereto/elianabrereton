@@ -12,7 +12,7 @@
 
 ## Resume & CV
 - [Resumé](/img/resume.pdf):  My resumé.
-- [CV](/img/ElianaBrereton_CVc.pdf): My professional & academic CV.
+- [CV](/img/ElianaBrereton_CV_web.pdf): My professional & academic CV.
 
 * * *
 
