@@ -37,7 +37,7 @@
 -   [Final Poster](/img/final_poster.pdf): This is my final thesis poster relating to the study I conducted (above). 
 -   [Final Slides](/img/final_slides.pdf): This is a copy of my research proposal slides, made for for my undergraduate thesis.
 
-  ### Undergraduate Articles
+### Interviews / Written Articles 
   - [COA Article](https://www.uoguelph.ca/arts/college/news/artworks-university-guelph-art-collection-view-mcmichael-summer): An article I wrote for the College of Arts (at the University of Guelph) in 2023.
   - [COA Article 2](https://www.uoguelph.ca/arts/sets/news/unveiling-future-food-visions-guelphs-culinary-tale-crafted-theatre-students-faculty): An article I wrote for the College of Arts (at the University of Guelph) in 2023.
   - [CEPS - Graduate Student Spotlight #1](https://csahs.uoguelph.ca/news/2021/03/abhilash-kantamneni-spotlight-guelph-maps-guy): A graduate student spotlight/interview I did with Abhilash Kantamneni, the "Guelph Maps Guy" for CEPS (College of Engineering and Physical Sciences, at the University of Guelph) in 2021.
