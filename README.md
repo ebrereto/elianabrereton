@@ -46,4 +46,8 @@
   - [CEPS Interview #1](https://www.uoguelph.ca/ceps/news/2021/10/qa-gwyneth-erhardt): An interview with Gwyneth Erhardt for CEPS in 2021.
   - [CEPS Interview #2](https://www.uoguelph.ca/ceps/news/2021/11/qa-victoria-leaker): An interview with Victoria Leaker for CEPS in 2021.
   - [CEPS Study Tips Article](https://www.uoguelph.ca/ceps/news/2021/12/ceps-exam-season-study-tips): Another article I wrote for CEPS in 2021.
-    
+
+* * *
+## Ceritifications & Skills
+* * *
+-   [TCPS 2022](/img/tcps.pdf):  Completed the course on Research Ethics based on the Tri-Council Policy Statement: Ethical Conduct for Research Involving Humans (TCPS 2: CORE 2022), issued by the Government of Canada, allowing me to conduct research involving human participants.
