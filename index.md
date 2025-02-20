@@ -3,6 +3,10 @@ layout: default
 title: Home
 ---
 
-# Welcome to My Personal Site
+# Eliana Brereton
 
-Welcome to the personal portfolio website of Eliana Brereton (aspiring AI ethicist & data scientist). Navigate through the sections to learn more about my education, projects, and research!
+[Home](/) | [Projects & Research](/projects_and_research) | [Education & Volunteering](/education_and_volunteering) | [Resume & CV](/resume_and_cv) | [Contact](/contact)
+
+---
+
+This is the home page of my personal portfolio website. Navigate through the sections to learn more about my education, projects, and research!
