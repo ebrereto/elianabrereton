@@ -6,7 +6,6 @@ permalink: /resume_and_cv/
 
 [Home](/) | [Projects & Research](/projects_and_research) | [Education & Volunteering](/education_and_volunteering) | [Resume & CV](/resume_and_cv) | [Contact](/contact)
 
----
 
 # Resume & CV
 
