@@ -6,7 +6,7 @@ theme: jekyll-theme-minimal
 
 # Custom styling
 include:
-  - /css/custom.css
+  - css/custom.css
 
 
 # Navigation Links
