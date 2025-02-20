@@ -32,7 +32,7 @@ body {
 }
 
 .navbar a {
-    color: #00ff99; /* Green accent color */
+    color: #8cd9b3; /* Green accent color */
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -45,7 +45,7 @@ body {
 
 /* Page Content */
 h1, h2, h3, h4, h5, h6 {
-    color: #00ff99; /* Green accent color */
+    color: #8cd9b3; /* Green accent color */
 }
 
 p, li {
@@ -54,7 +54,7 @@ p, li {
 
 /* Links */
 a {
-    color: #00ff99;
+    color: #8cd9b3;
     text-decoration: underline;
 }
 
@@ -64,7 +64,7 @@ a:hover {
 
 /* Buttons (Optional) */
 .button {
-    background-color: #00ff99;
+    background-color: #8cd9b3;
     border: none;
     color: #121212;
     padding: 10px 20px;
