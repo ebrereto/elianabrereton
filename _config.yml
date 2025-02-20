@@ -7,3 +7,12 @@ theme: jekyll-theme-minimal
 # Custom styling
 include:
   - /css/custom.css
+
+
+# Navigation Links
+header_pages:
+  - index.md
+  - projects_and_research.md
+  - education_and_volunteering.md
+  - resume_and_cv.md
+  - contact.md
