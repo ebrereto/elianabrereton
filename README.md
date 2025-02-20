@@ -19,10 +19,9 @@
 * * *
 **M.A., Philosophy of Data Science | University of Guelph** 
 (_Sept. 2024 - Current_)
-- My in-progress Major Research Project (MRP) critically examines the performance of Automated Video Interview (AVI) systems by comparing AI-generated transcription assessments against human-rater interview evaluations, providing an empirical  analysis of AI reliability in recruitment.
-- My research focuses on identifying patterns of agreement and divergence between AI and human ratings across demographic subgroups, including gender, race, and age.
-- I aim to uncover potential biases in AI-driven hiring tools and explore the ethical implications of allowing AI to influence recruitment decisions.
-- My research also emphasizes the need for transparency, fairness, and accountability in algorithmic governance, particularly within human resources practices such as hiring, where AI-based decision making tools are becoming continually more favourable.
+- My (in-progress) research project critically examines the performance of Automated Video Interview (AVI) systems by comparing AI-generated transcription assessments against human-rater interview evaluations, providing an empirical  analysis of AI reliability in recruitment.
+- My research specifically focuses on identifying patterns of agreement vs. divergence between AI and human ratings, also looking across demographic subgroups, including gender, race, and age.
+- I aim to uncover potential biases in AI-driven hiring tools, and further explore the ethical implications of allowing AI to influence recruitment decisions.
 - Through this project, I am developing advanced skills in statistical analysis (with R and Python), along with data analysis, algorithmic auditing, and ethical evaluation frameworks, positioning me for roles in AI ethics, governance, and data-driven research.
 
 * * *
