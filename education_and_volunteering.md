@@ -10,6 +10,7 @@ permalink: /education_and_volunteering/
 
 # Education & Volunteering
 
+* * *
 ## Education
 * * *
 **M.A., Philosophy of Data Science | University of Guelph** 
