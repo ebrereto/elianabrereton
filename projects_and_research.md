@@ -4,7 +4,8 @@ title: Projects & Research
 permalink: /projects_and_research/
 ---
 
-[Home](/) | [Education & Volunteering](/education_and_volunteering) | [Resume & CV](/resume_and_cv) | [Contact](/contact)
+[Home](/) | [Projects & Research](/projects_and_research) | [Education & Volunteering](/education_and_volunteering) | [Resume & CV](/resume_and_cv) | [Contact](/contact)
+
 
 
 # Projects & Research
