@@ -12,7 +12,7 @@ Hi there!
 
 ### Welcome to my personal website & portfolio. 
 
-My name is Eliana, and I'm an MA student studying Philosophy and Data Science in Onatrio, Canada. 
+My name is Eliana, and I'm an MA student studying Philosophy and Data Science in Ontario, Canada. 
 
 I am an aspiring AI ethicist. My ultimate goal is to work in AI governance and ethical research, more specifically in regard to work and hiring methods.
 
