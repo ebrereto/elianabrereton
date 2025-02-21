@@ -10,7 +10,6 @@ permalink: /education_and_volunteering/
 
 # Education & Volunteering
 
-* * *
 ## Education
 * * *
 **M.A., Philosophy of Data Science | University of Guelph** 
@@ -21,8 +20,17 @@ permalink: /education_and_volunteering/
 - Through this project, I am developing advanced skills in statistical analysis (with R and Python), along with data analysis, algorithmic auditing, and ethical evaluation frameworks, positioning me for roles in AI ethics, governance, and data-driven research.
 
 * * *
-#### Previous Education
 **B.A., Psychology (Co-op Honours Degree) | University of Guelph.** 
 (_Sept. 2019 - Apr. 2024_)
 - Completed an undergraduate Honours Thesis in the ethicalities of AI & GAI usage in HR settings, under the supervision of Dr. Gus Skorburg.
 - 4.0 GPA throughout degree.
+
+* * *
+# Volunteering
+* * * 
+**Regional Bowl Lead (Ethics Bowl Canada, Guelph, ON)** 
+- Organized and led the entire 250+ attendee event, overseeing all logistics, scheduling, and coordination.
+- Managed a team of 75+ judges, moderators, and volunteers, ensuring smooth operations from planning through execution.
+- Designed a fair and engaging tournament structure, acted as the primary liaison for participants, sponsors, and stakeholders, and promoted education and critical thinking by fostering a collaborative and inspiring environment.
+- Utilized advanced administrative skills, including schedule management, data compilation, and logistics coordination with tools like Excel.
+- Link to the [Ethics Bowl Wesbite](https://ethicsbowl.ca/). 
