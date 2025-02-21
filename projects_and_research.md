@@ -7,8 +7,9 @@ permalink: /projects_and_research/
 [Home](/) | [Projects & Research](/projects_and_research) | [Education & Volunteering](/education_and_volunteering) | [Resume & CV](/resume_and_cv) | [Contact](/contact)
 
 
-
+* * *
 # Projects & Research
+* * *
 
 ### Undergraduate Thesis
 -   [Undergraduate Thesis Paper](/img/final_paper.pdf):  This is my finalized undergraduate honours thesis project, a paper entitled: "Exploring Ethical Considerations: Generative AI's Impact on Current & Future HR Practices". In this paper I explore GAI's ethical impact(s) on the many day to day job tasks of HR professionals and the possible implications this has for current and future work in HR.
