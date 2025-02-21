@@ -8,9 +8,14 @@ title: Home
 
 
 Hi there! 
+===
 
-Welcome to my personal portfolio & website. 
+### Welcome to my personal website & portfolio. 
 
-Navigate through the different sections (located above) to learn more about my background, education, projects, and research!
+My name is Eliana, and I'm an MA student studying Philosophy and Data Science in Onatrio, Canada. 
+
+I am an aspiring AI ethicist. My ultimate goal is to work in AI governance and ethical research, more specifically in regard to work and hiring methods.
+
+Navigate through the different sections above to learn more about my background, education, current projects, and research!
 
 Have a great day!
