@@ -12,10 +12,10 @@ Hi there!
 
 ### Welcome to my personal website & portfolio. 
 
-My name is Eliana, and I'm an MA student studying Philosophy and Data Science in Ontario, Canada. 
+I’m Eliana, a graduate student in Artificial Intelligence (AI) Ethics based in Ontario, Canada.
 
-I am an aspiring AI ethicist. My ultimate goal is to work in AI governance and ethical research, more specifically in regard to work and hiring methods.
+My focus lies in responsible AI governance, with particular interest in how AI systems impact hiring, work, and decision-making. I’m passionate about building fair, accountable, and human-centered technologies, and I’m actively seeking opportunities where I can contribute research, analysis, and ethical insight to real-world AI applications.
 
-Navigate through the different sections above to learn more about my background, education, current projects, and research!
+Navigate through the different sections above to learn more about my background, education, current projects, and research (and learn where you can contact me).
 
-Have a great day!
+Have a great day, and thanks for stopping by!
