@@ -14,11 +14,10 @@ permalink: /education_and_volunteering/
 ## Education
 * * *
 **M.A., Philosophy of Data Science | University of Guelph** 
-(_Sept. 2024 - Current_)
-- My (in-progress) research project critically examines the performance of Automated Video Interview (AVI) systems by comparing AI-generated transcription assessments against human-rater interview evaluations, providing an empirical  analysis of AI reliability in recruitment.
-- My research specifically focuses on identifying patterns of agreement vs. divergence between AI and human ratings, also looking across demographic subgroups, including gender, race, and age.
-- I aim to uncover potential biases in AI-driven hiring tools, and further explore the ethical implications of allowing AI to influence recruitment decisions.
-- Through this project, I am developing advanced skills in statistical analysis (with R and Python), along with data analysis, algorithmic auditing, and ethical evaluation frameworks, positioning me for roles in AI ethics, governance, and data-driven research.
+(_Sept. 2024 - June 2025_)
+- Conducted a Major Research Project on the reliability and bias of AI-generated hiring assessments in Automated Video Interviews, supervised by Dr. Gus Skorburg & Dr. Deborah Powell.
+- Research compared AI and human interview ratings, with a focus on demographic subgroup differences (gender, race, age). See "Projects and Research" page for full paper + statistical results.
+- 4.0 GPA throughout degree.
 
 * * *
 **B.A., Psychology (Co-op Honours Degree) | University of Guelph.** 
