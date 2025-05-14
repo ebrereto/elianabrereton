@@ -13,7 +13,7 @@ permalink: /education_and_volunteering/
 * * *
 ## Education
 * * *
-**M.A., Philosophy of Data Science | University of Guelph** 
+**M.A., Ethics of Artificial Intelligence | University of Guelph** 
 (_Sept. 2024 - June 2025_)
 - Conducted a Major Research Project on the reliability and bias of AI-generated hiring assessments in Automated Video Interviews, supervised by Dr. Gus Skorburg & Dr. Deborah Powell.
 - Research compared AI and human interview ratings, with a focus on demographic subgroup differences (gender, race, age). See "Projects and Research" page for full paper + statistical results.
