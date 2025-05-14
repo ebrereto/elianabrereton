@@ -10,7 +10,7 @@ permalink: /projects_and_research/
 # Projects & Research
 * * *
 
-### Graduate Major Research Project (Essentialy a Thesis)
+### Graduate Major Research Project 
 -   [Final Research Paper](/img/ElianasMRP.pdf): This project investigates the reliability, alignment, and fairness of ChatGPT-generated interview evaluations compared to human ratings in automated video interview (AVI) settings. Using a sample of 183 transcribed candidate responses, I assessed how closely AI-generated scores matched those of trained human evaluators—and whether this alignment varied across gender, race, and age subgroups.
 - Results showed a strong overall correlation between ChatGPT and human ratings (ICC = 0.94), but also revealed significant divergences: ChatGPT consistently scored candidates higher and showed concerning bias patterns, particularly underrating Black participants and overrating middle-aged ones—discrepancies that were not present in human ratings.
 - This research highlights both the potential and ethical limitations of using large language models in hiring processes and emphasizes the need for human oversight and fairness audits when deploying AI evaluation tools.
