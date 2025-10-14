@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eliana Brereton - Graduate student in AI Ethics specializing in responsible AI governance, fairness in hiring systems, and algorithmic auditing.">
+    <meta name="author" content="Eliana Brereton">
+    <meta name="keywords" content="AI Ethics, Algorithmic Fairness, AI Governance, Machine Learning Ethics, Automated Interview Systems">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Eliana Brereton - AI Ethics Researcher">
+    <meta property="og:description" content="Graduate student in AI Ethics specializing in responsible AI governance and fairness in automated systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brereton.me">
+
+    <title>Eliana Brereton - AI Ethics Researcher</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/img/headshot_circle.jpeg">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">Eliana Brereton</a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <div class="nav-menu">
+                <a href="/" class="nav-link active">Home</a>
+                <a href="/projects.html" class="nav-link">Projects & Research</a>
+                <a href="/education.html" class="nav-link">Education & Volunteering</a>
+                <a href="/resume.html" class="nav-link">Resume & CV</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <section class="hero">
+                <div class="hero-image">
+                    <img src="/img/headshot_circle.jpeg" alt="Eliana Brereton headshot">
+                </div>
+                <div class="hero-content">
+                    <h1>Hi there!</h1>
+                    <p class="hero-subtitle">AI Ethics Researcher</p>
+                    <div class="hero-description">
+                        <p>I'm Eliana, a graduate student in Artificial Intelligence (AI) Ethics based in Ontario, Canada.</p>
+                        <p>My focus lies in responsible AI governance, with particular interest in how AI systems impact hiring, work, and decision-making. I'm passionate about building fair, accountable, and human-centered technologies, and I'm actively seeking opportunities where I can contribute research, analysis, and ethical insight to real-world AI applications.</p>
+                        <p>Navigate through the sections above to learn more about my background, education, current projects, and research.</p>
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="/projects.html" class="btn">View My Work</a>
+                        <a href="/contact.html" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Links Section -->
+            <section class="section">
+                <h2 class="section-title">Highlights</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div class="card">
+                        <h3 class="card-title">Current Research</h3>
+                        <p class="card-content">Investigating the reliability and fairness of ChatGPT-generated interview evaluations compared to human ratings in automated video interview settings.</p>
+                        <a href="/projects.html" style="display: inline-block; margin-top: 1rem;">Learn more →</a>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Education</h3>
+                        <p class="card-content">M.A. in Philosophy of Data Science at University of Guelph, focusing on AI ethics, algorithmic auditing, and sociotechnical analysis.</p>
+                        <a href="/education.html" style="display: inline-block; margin-top: 1rem;">View background →</a>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Skills</h3>
+                        <p class="card-content">Statistical analysis in R and Python, algorithmic auditing, bias detection, research design, and ethical evaluation frameworks.</p>
+                        <a href="/resume.html" style="display: inline-block; margin-top: 1rem;">See resume →</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Eliana Brereton. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Add scrolled class to nav on scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
