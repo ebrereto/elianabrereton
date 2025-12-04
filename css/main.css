@@ -9,45 +9,70 @@ html {
 body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
-  line-height: var(--leading-normal);
+  line-height: 1.7; /* Increased for better flow */
   color: var(--color-text-primary);
   background-color: var(--color-background);
+  letter-spacing: var(--letter-spacing-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
+/* Typography Hierarchy - Premium System */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: var(--font-semibold);
-  line-height: var(--leading-tight);
   color: var(--color-text-primary);
-  margin-bottom: var(--space-2);
+  margin: 0;
 }
 
+/* H1 - Hero/Page Titles - Serif, Large, Spaced */
 h1 {
-  font-size: var(--text-5xl);
-  font-weight: var(--font-bold);
-  margin-bottom: var(--space-3);
+  font-family: var(--font-serif);
+  font-size: var(--text-5xl); /* 3rem / 48px */
+  font-weight: var(--font-bold); /* 700 */
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-tight);
+  margin-bottom: 1.5rem;
 }
 
+/* H2 - Section Titles - Serif, Medium */
 h2 {
-  font-size: var(--text-3xl);
-  margin-top: var(--space-6);
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl); /* 2.25rem / 36px */
+  font-weight: var(--font-semibold); /* 600 */
+  line-height: 1.3;
+  letter-spacing: var(--letter-spacing-normal);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
+/* H3 - Card Titles - Sans, Bold */
 h3 {
-  font-size: var(--text-2xl);
-  margin-top: var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--text-2xl); /* 1.875rem / 30px */
+  font-weight: var(--font-semibold);
+  line-height: 1.4;
+  letter-spacing: var(--letter-spacing-normal);
+  margin-bottom: 1rem;
 }
 
+/* H4 - Subsection Headers - Sans, Medium */
 h4 {
-  font-size: var(--text-xl);
-  margin-top: var(--space-3);
+  font-family: var(--font-sans);
+  font-size: var(--text-lg); /* 1.125rem / 18px */
+  font-weight: var(--font-medium);
+  line-height: 1.5;
+  letter-spacing: var(--letter-spacing-wide);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase; /* Subtle sophistication */
 }
 
+/* Paragraph spacing for flow */
 p {
-  margin-bottom: var(--space-2);
+  margin-bottom: 1.25rem;
   color: var(--color-text-secondary);
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 a {
@@ -177,11 +202,15 @@ main {
   margin-bottom: var(--space-2);
 }
 
+/* Hero Subtitle - Distinctive styling */
 .hero-subtitle {
+  font-family: var(--font-sans);
   font-size: var(--text-xl);
-  color: var(--color-accent);
   font-weight: var(--font-medium);
-  margin-bottom: var(--space-4);
+  letter-spacing: var(--letter-spacing-wider);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
 }
 
 .hero-description {
@@ -323,6 +352,285 @@ hr {
   text-align: center;
   color: var(--color-text-tertiary);
   font-size: var(--text-sm);
+}
+
+/* ========================================
+   SPECIAL TYPOGRAPHY CLASSES
+   ======================================== */
+
+/* Section Title - Enhanced with accent underline */
+.section-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--color-accent);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* Card Title - Updated */
+.card-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Card Subtitle - Metadata */
+.card-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--font-regular);
+  color: var(--color-text-secondary);
+  letter-spacing: var(--letter-spacing-wide);
+  margin-bottom: 1rem;
+}
+
+/* Lead paragraph - Hero intro */
+.lead {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  font-weight: var(--font-regular);
+}
+
+/* ========================================
+   ANIMATION SYSTEM
+   ======================================== */
+
+/* Scroll Reveal Animations - Intersection Observer Triggered */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--transition-smooth),
+              transform var(--transition-smooth);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered entrance delays */
+.scroll-reveal:nth-child(1) { transition-delay: 0ms; }
+.scroll-reveal:nth-child(2) { transition-delay: 100ms; }
+.scroll-reveal:nth-child(3) { transition-delay: 200ms; }
+.scroll-reveal:nth-child(4) { transition-delay: 300ms; }
+.scroll-reveal:nth-child(5) { transition-delay: 400ms; }
+.scroll-reveal:nth-child(6) { transition-delay: 500ms; }
+
+/* Fade-in on page load */
+.fade-in {
+  animation: fadeIn var(--transition-smooth) var(--ease-out-expo);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero entrance animation */
+.hero-entrance {
+  animation: heroEntrance 1s var(--ease-out-expo);
+}
+
+@keyframes heroEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Enhanced Card Hover States */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), transparent);
+  transform: translateX(-100%);
+  transition: transform var(--transition-smooth);
+}
+
+.card:hover::before {
+  transform: translateX(0);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08),
+              0 4px 8px rgba(0, 0, 0, 0.04);
+  border-color: var(--color-accent);
+}
+
+/* Enhanced Button Hover with Ripple */
+.btn {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(8, 145, 178, 0.25),
+              0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+/* Navigation Active Indicator - Smooth Slide */
+.nav-link {
+  position: relative;
+  transition: color var(--transition-base);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width var(--transition-base) var(--ease-out-expo);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Tag/Badge Hover Animation */
+.tag {
+  transition: all var(--transition-fast);
+  cursor: default;
+}
+
+.tag:hover {
+  background: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 8px rgba(8, 145, 178, 0.25);
+}
+
+/* Link Underline Animation */
+a:not(.btn):not(.nav-link):not(.card) {
+  position: relative;
+  background-image: linear-gradient(to right, var(--color-accent), var(--color-accent));
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size var(--transition-base) var(--ease-out-expo);
+}
+
+a:not(.btn):not(.nav-link):not(.card):hover {
+  background-size: 100% 2px;
+  text-decoration: none;
+}
+
+/* Image hover effects */
+img {
+  transition: transform var(--transition-smooth);
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Pulse animation for important CTAs */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(8, 145, 178, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(8, 145, 178, 0);
+  }
+}
+
+.btn-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Performance optimizations */
+.card,
+.btn,
+.nav-link,
+.scroll-reveal {
+  will-change: transform, opacity;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-entrance,
+  .fade-in {
+    animation: none;
+  }
 }
 
 /* Utility Classes */
