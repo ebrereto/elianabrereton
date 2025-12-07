@@ -12,9 +12,9 @@
   --color-border: #E0E0E0;
   --color-border-light: #F0F0F0;
 
-  /* Typography - Enhanced System */
-  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-serif: 'Crimson Pro', Georgia, 'Times New Roman', Times, serif;
+  /* Typography */
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', Times, serif;
   --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Liberation Mono', Menlo, monospace;
 
   /* Font Sizes */
