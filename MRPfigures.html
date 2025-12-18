@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Figures and graphs from Eliana Brereton's M.A. research on ChatGPT in hiring assessments - data visualizations and statistical analysis.">
+    <meta name="author" content="Eliana Brereton">
+
+    <title>MRP Figures & Graphs - Eliana Brereton</title>
+
+    <link rel="icon" type="image/jpeg" href="/img/headshot_circle.jpeg">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">Eliana Brereton</a>
+            <a href="/img/web_resume_2025.pdf" class="btn btn-resume" target="_blank">Resume</a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <div class="nav-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/projects.html" class="nav-link">Projects</a>
+                <a href="/work-experience.html" class="nav-link">Work Experience</a>
+                <a href="/education.html" class="nav-link">Education & Volunteering</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="container container-narrow">
+            <h1>Eliana's MRP: Figures & Graphs</h1>
+            <h2>Auditing AI-Generated Hiring Assessments</h2>
+            <p class="lead">M.A. Ethics of Artificial Intelligence | University of Guelph | 2025</p>
+
+            <div class="research-summary">
+                <p>This applied research project audited ChatGPT's reliability and fairness as a candidate interview evaluator. By comparing ChatGPT-generated ratings to those of trained humans across 60 video interviews, the study revealed systematic bias patterns: ChatGPT consistently scored candidates higher (+0.88 points average), particularly underrating Black candidates and overrating middle-aged candidates—patterns absent in human evaluations.</p>
+
+                <p>These findings demonstrate that AI evaluation tools, when used in sensitive decision-making like hiring, require rigorous fairness audits and oversight before deployment, with clear implications for organizations considering using AI to influence their hiring decisions.</p>
+            </div>
+        </section>
+
+        <!-- Figure 2 -->
+        <section class="container">
+            <div class="figure-container scroll-reveal">
+                <img src="/img/figure2.png" alt="Rating Distribution Comparison: AI vs Human Ratings" class="research-figure">
+                <p class="figure-caption">
+                    <strong>Figure 2: Rating Distribution Comparison: AI vs. Human Ratings</strong><br>
+                    ChatGPT ratings (left, blue) consistently skewed higher than human ratings (right, purple), with greater variability in score distribution. While both raters followed the same 5-point BARS scale, AI showed systematic inflation with mean scores of 3.14 vs. 2.27 for humans; a difference of 0.88 points representing a large effect (d = -1.08).
+                </p>
+            </div>
+        </section>
+
+        <!-- Figure 3 -->
+        <section class="container">
+            <div class="figure-container scroll-reveal">
+                <img src="/img/figure3.png" alt="Overall Correlation between ChatGPT and Human Ratings" class="research-figure">
+                <p class="figure-caption">
+                    <strong>Figure 3: Overall Correlation between ChatGPT & Human Ratings</strong><br>
+                    Scatterplot illustrating the relationship between ChatGPT-generated interview ratings and average human-assigned ratings. Each point represents a single participant, and the blue line depicts the least-squares regression line. The correlation coefficient (r) and corresponding p-value are displayed in the upper left corner. Human ratings reflect the average of four trained raters, who demonstrated high inter-rater reliability and consistent evaluation standards.
+                </p>
+            </div>
+        </section>
+
+        <!-- Figure 4 -->
+        <section class="container">
+            <div class="figure-container scroll-reveal">
+                <img src="/img/figure4.png" alt="Difference in Correlations Between ChatGPT and Human Ratings by Demographic Subgroup" class="research-figure">
+                <p class="figure-caption">
+                    <strong>Figure 4: Difference in Correlations (r) Between ChatGPT and Human Ratings, By Demographic Subgroup</strong><br>
+                    Correlation coefficients between demographic subgroup membership and interview ratings, separately for ChatGPT-generated and human-assigned scores. Each point represents the Pearson correlation (r) for a given demographic subgroup, with horizontal bars indicating 95% confidence intervals. Subgroups are ordered vertically by category, and rating sources are color-coded and shown side by side for direct comparison.
+                </p>
+            </div>
+        </section>
+
+        <!-- Navigation back -->
+        <section class="container" style="text-align: center; margin: var(--space-8) 0;">
+            <a href="/projects.html" class="btn btn-secondary">← Back to Projects</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Eliana Brereton. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Animation System -->
+    <script src="/js/animations.js"></script>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navMenu && navMenu.classList.contains('active')) {
+                if (!e.target.closest('.nav')) {
+                    navMenu.classList.remove('active');
+                }
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
