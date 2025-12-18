@@ -527,8 +527,9 @@ hr {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(255, 107, 74, 0.3),
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15),
               0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
 }
 
 .btn:active {
@@ -568,7 +569,7 @@ hr {
   color: white;
   border-color: var(--color-accent);
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 4px 8px rgba(255, 107, 74, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Link Underline Animation */
@@ -598,10 +599,10 @@ img {
 /* Pulse animation for important CTAs */
 @keyframes pulse {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(255, 107, 74, 0.5);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
   }
   50% {
-    box-shadow: 0 0 0 12px rgba(255, 107, 74, 0);
+    box-shadow: 0 0 0 12px rgba(0, 0, 0, 0);
   }
 }
 
@@ -719,6 +720,105 @@ img {
 @media (max-width: 1024px) and (min-width: 769px) {
   .hero {
     gap: var(--space-6);
+  }
+}
+
+/* Greyscale Redesign - New Components */
+
+/* How I Can Help Section */
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.help-item h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-2);
+}
+
+.help-item p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* Technical Skills Section */
+.skill-category {
+  margin-bottom: var(--space-6);
+}
+
+.skill-category h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-3);
+  color: var(--color-text-primary);
+}
+
+/* Resume Button in Navigation */
+.btn-resume {
+  position: absolute;
+  right: var(--container-padding);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+}
+
+/* Research Figures Page Components */
+.research-summary {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-6);
+  margin: var(--space-6) 0;
+}
+
+.research-summary p {
+  margin-bottom: var(--space-3);
+}
+
+.research-summary p:last-child {
+  margin-bottom: 0;
+}
+
+.figure-container {
+  margin: var(--space-8) 0;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+}
+
+.research-figure {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--space-4);
+}
+
+.figure-caption {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  padding: var(--space-2);
+}
+
+.figure-caption strong {
+  display: block;
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .btn-resume {
+    display: none; /* Hide on mobile, accessible via hamburger menu */
+  }
+
+  .help-grid {
+    grid-template-columns: 1fr;
   }
 }
 

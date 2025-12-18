@@ -29,6 +29,7 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="/" class="nav-brand">Eliana Brereton</a>
+            <a href="/img/web_resume_2025.pdf" class="btn btn-resume" target="_blank">Resume</a>
             <button class="nav-toggle" aria-label="Toggle navigation menu">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -38,10 +39,9 @@
             </button>
             <div class="nav-menu">
                 <a href="/" class="nav-link active">Home</a>
-                <a href="/projects.html" class="nav-link">Projects & Research</a>
+                <a href="/projects.html" class="nav-link">Projects</a>
                 <a href="/work-experience.html" class="nav-link">Work Experience</a>
                 <a href="/education.html" class="nav-link">Education & Volunteering</a>
-                <a href="/resume.html" class="nav-link">Resume & CV</a>
                 <a href="/contact.html" class="nav-link">Contact</a>
             </div>
         </div>
@@ -93,76 +93,104 @@
 
             <!-- How I Can Help Section -->
             <section class="section">
-                <div style="background-color: var(--color-surface); border: 2px solid var(--color-accent); border-radius: var(--border-radius-lg); padding: 3rem 2rem;">
-                    <h2 style="text-align: center; font-size: var(--text-4xl); margin-bottom: 1rem;">How I Can Help Your Organization</h2>
-                    <p style="text-align: center; font-size: var(--text-lg); color: var(--color-text-secondary); margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-                        I bring a unique combination of academic rigor and practical experience to help organizations deploy AI systems responsibly and ethically.
-                    </p>
+                <h2 class="section-title">How I Can Help Your Organization</h2>
 
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                        <div>
-                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-accent); flex-shrink: 0;">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                                <h3 style="font-size: var(--text-xl); margin: 0;">Algorithmic Bias Audits</h3>
-                            </div>
-                            <p style="color: var(--color-text-secondary);">Comprehensive fairness assessments of AI hiring tools, evaluation systems, and decision-making algorithms across demographic subgroups.</p>
-                        </div>
-
-                        <div>
-                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-accent); flex-shrink: 0;">
-                                    <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                </svg>
-                                <h3 style="font-size: var(--text-xl); margin: 0;">Responsible AI Policy Development</h3>
-                            </div>
-                            <p style="color: var(--color-text-secondary);">Design and implementation of AI governance frameworks, ethical guidelines, and compliance protocols for responsible AI deployment.</p>
-                        </div>
-
-                        <div>
-                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-accent); flex-shrink: 0;">
-                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                </svg>
-                                <h3 style="font-size: var(--text-xl); margin: 0;">AI Vendor Evaluation</h3>
-                            </div>
-                            <p style="color: var(--color-text-secondary);">Due diligence assessments for AI/HR technology procurement, including evaluation frameworks and red flag identification.</p>
-                        </div>
-
-                        <div>
-                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-accent); flex-shrink: 0;">
-                                    <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                                </svg>
-                                <h3 style="font-size: var(--text-xl); margin: 0;">Training & Education</h3>
-                            </div>
-                            <p style="color: var(--color-text-secondary);">Workshops and training sessions on ethical AI deployment, bias awareness, and best practices for HR and technical teams.</p>
-                        </div>
-
-                        <div>
-                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-accent); flex-shrink: 0;">
-                                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-                                </svg>
-                                <h3 style="font-size: var(--text-xl); margin: 0;">Compliance & Accessibility</h3>
-                            </div>
-                            <p style="color: var(--color-text-secondary);">AODA/WCAG compliance audits, accessibility testing, and guidance on inclusive technology implementation.</p>
-                        </div>
-
-                        <div>
-                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--color-accent); flex-shrink: 0;">
-                                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                                </svg>
-                                <h3 style="font-size: var(--text-xl); margin: 0;">Research & Advisory</h3>
-                            </div>
-                            <p style="color: var(--color-text-secondary);">Strategic guidance on AI ethics initiatives, research collaboration, and evidence-based recommendations for responsible AI adoption.</p>
-                        </div>
+                <div class="help-grid">
+                    <div class="help-item">
+                        <h3>Algorithmic Bias Audits</h3>
+                        <p>Comprehensive fairness assessments of AI hiring tools, evaluation systems, and decision-making algorithms across demographic subgroups.</p>
                     </div>
 
-                    <div style="text-align: center; margin-top: 3rem;">
-                        <a href="/contact.html" class="btn" style="font-size: var(--text-lg); padding: 1rem 2rem;">Let's Discuss Your Needs</a>
+                    <div class="help-item">
+                        <h3>Full-cycle Recruiting & Operations</h3>
+                        <p>Boolean searches, LinkedIn Recruiter mastery, ATS management, and data-driven pipeline optimization to identify, engage, and close top talent efficiently.</p>
+                    </div>
+
+                    <div class="help-item">
+                        <h3>Compliance & Accessibility</h3>
+                        <p>AODA/WCAG compliance audits, accessibility testing, and guidance on inclusive technology implementation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Skills & Tools Section -->
+            <section class="section">
+                <h2 class="section-title">Technical Skills & Tools</h2>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>Programming & Statistical Analysis</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">R</span>
+                        <span class="tag">Statistical Modeling</span>
+                        <span class="tag">ICC Analysis</span>
+                        <span class="tag">T-tests</span>
+                        <span class="tag">Pearson Correlation</span>
+                        <span class="tag">Fisher's r-to-z</span>
+                        <span class="tag">Data Visualization</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>AI & Machine Learning</h3>
+                    <div class="tags">
+                        <span class="tag">OpenAI API</span>
+                        <span class="tag">Large Language Models</span>
+                        <span class="tag">Prompt Engineering</span>
+                        <span class="tag">LLM Evaluation</span>
+                        <span class="tag">AI Bias Detection</span>
+                        <span class="tag">Fairness Metrics</span>
+                        <span class="tag">Algorithmic Auditing</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>HR Technology & Recruiting</h3>
+                    <div class="tags">
+                        <span class="tag">LinkedIn Recruiter</span>
+                        <span class="tag">Boolean Search</span>
+                        <span class="tag">ATS Systems</span>
+                        <span class="tag">Candidate Sourcing</span>
+                        <span class="tag">AI-Powered Sourcing Tools</span>
+                        <span class="tag">CRM Systems</span>
+                        <span class="tag">Technical Recruiting</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>Compliance & Accessibility</h3>
+                    <div class="tags">
+                        <span class="tag">AODA Compliance</span>
+                        <span class="tag">WCAG Standards</span>
+                        <span class="tag">Siteimprove</span>
+                        <span class="tag">Accessibility Audits</span>
+                        <span class="tag">W3C Accessibility</span>
+                        <span class="tag">TCPS 2 (Research Ethics)</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>Web & Content Management</h3>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">SharePoint</span>
+                        <span class="tag">Content Management Systems</span>
+                        <span class="tag">Website Administration</span>
+                        <span class="tag">SEO</span>
+                        <span class="tag">Social Media Analytics</span>
+                    </div>
+                </div>
+
+                <div class="skill-category scroll-reveal">
+                    <h3>Productivity & Project Management</h3>
+                    <div class="tags">
+                        <span class="tag">Microsoft Office Suite</span>
+                        <span class="tag">Microsoft Excel</span>
+                        <span class="tag">Data Management</span>
+                        <span class="tag">Project Coordination</span>
+                        <span class="tag">Digital Project Management</span>
+                        <span class="tag">Process Documentation</span>
                     </div>
                 </div>
             </section>
