@@ -727,10 +727,19 @@ img {
 
 /* How I Can Help Section */
 .help-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: var(--space-6);
   margin-top: var(--space-6);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.help-item {
+  text-align: center;
+  width: 100%;
 }
 
 .help-item h3 {
@@ -815,10 +824,6 @@ img {
 @media (max-width: 768px) {
   .btn-resume {
     display: none; /* Hide on mobile, accessible via hamburger menu */
-  }
-
-  .help-grid {
-    grid-template-columns: 1fr;
   }
 }
 
