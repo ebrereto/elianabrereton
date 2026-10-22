@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / '_source'
 PAGES = {
     'fishing': ('Fishing | Eliana Brereton', 'A little place to fish. A cozy original fishing game.', '/fishing.html', 'play'),
-    'index': ('Eliana Brereton | Recruiting, Technology & AI Ethics', 'Recruiter at PostHog with a research background in AI ethics. Explore my work, research, and interests.', '/', ''),
+    'index': ('Eliana Brereton - Portfolio', 'Recruiter at PostHog with a research background in AI ethics. Explore my work, research, and interests.', '/', ''),
     'work': ('Work | Eliana Brereton', 'Selected recruiting and accessibility work, followed by my professional history.', '/work.html', 'work'),
     'research': ('Research | Eliana Brereton', 'Research into AI ethics, algorithmic hiring, and AI-generated interview assessments. Papers, results, and figures.', '/research.html', 'research'),
     'about': ('About | Eliana Brereton', 'My background in psychology and AI ethics, education, Ethics Bowl leadership, and interests outside work.', '/about.html', 'about'),
