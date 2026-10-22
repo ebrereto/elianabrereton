@@ -244,18 +244,18 @@ nav a:hover::after,nav a[aria-current]::after { transform:scaleX(1); }
 }
 .text-link span { transition:transform .18s ease; }
 .text-link:hover span { transform:translate(3px,-3px); }
-.portrait-block { justify-self:end; position:relative; width:min(100%,290px); }
+.portrait-block { justify-self:end; position:relative; width:min(100%,350px); transform:rotate(1.15deg); }
 .portrait-block::before { content:none; }
 .portrait-block::after {
   content:'';
   position:absolute;
-  inset:16px -16px -16px 16px;
+  inset:18px -18px -18px 18px;
   z-index:-1;
-  background:var(--blue);
+  background:var(--coral);
   border:1px solid var(--ink);
-  border-radius:32px 8px 32px 8px;
+  border-radius:10px 42px 10px 42px;
 }
-.portrait { width:100%; aspect-ratio:4/5; height:auto; object-fit:cover; object-position:center top; border:1px solid var(--ink); border-radius:32px 8px 32px 8px; filter:saturate(.82) contrast(1.04); }
+.portrait { width:100%; aspect-ratio:5/6; height:auto; object-fit:cover; object-position:center 42%; border:1px solid var(--ink); border-radius:10px 42px 10px 42px; filter:saturate(.78) contrast(1.04) sepia(.05); }
 
 .section { padding-block:clamp(78px,10vw,140px); }
 .selected-section { display:grid; grid-template-columns:.8fr 1.2fr; gap:clamp(45px,8vw,108px); position:relative; }
@@ -396,7 +396,7 @@ nav a:hover::after,nav a[aria-current]::after { transform:scaleX(1); }
   .intro h1 { font-size:clamp(3.35rem,17vw,5.4rem); line-height:.96; }
   .intro-description { margin-top:24px; padding-left:18px; }
   .intro-actions { margin-top:28px; align-items:flex-start; }
-  .portrait-block { justify-self:center; width:min(70vw,260px); margin-right:14px; }
+  .portrait-block { justify-self:center; width:min(76vw,320px); margin-right:14px; }
   .selected-section { grid-template-columns:1fr; gap:25px; }
   .selected-section::before { top:18px; }
   .selected-art { width:220px; margin:0; padding:0; }
@@ -432,7 +432,7 @@ nav a:hover::after,nav a[aria-current]::after { transform:scaleX(1); }
   .wordmark::before { width:12px; height:12px; box-shadow:3px 3px 0 var(--ink); }
   .menu-toggle { padding-inline:9px; }
   .intro-actions { flex-direction:column; gap:8px; }
-  .portrait-block { width:76vw; }
+  .portrait-block { width:min(82vw,310px); }
   .entry-meta { gap:8px 12px; }
 }
 
