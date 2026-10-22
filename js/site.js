@@ -1,5 +1,13 @@
 /* Optional motion: content is visible by default, even if this script fails. */
 (() => {
+  const root = document.documentElement;
+  const finePointer = window.matchMedia('(pointer: fine)');
+  if (finePointer.matches) {
+    window.addEventListener('pointermove', event => {
+      root.style.setProperty('--pointer-x', `${event.clientX}px`);
+      root.style.setProperty('--pointer-y', `${event.clientY}px`);
+    }, { passive: true });
+  }
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#navigation');
   const mobile = window.matchMedia('(max-width: 720px)');

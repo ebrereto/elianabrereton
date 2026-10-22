@@ -8,3 +8,20 @@
 @media(max-width:720px){.fishing-shell{padding:0 14px;margin-top:22px}.fishing-toolbar{gap:8px}.view-switch{gap:2px}.view-switch button{font-size:12px;padding:8px 10px}.utility-controls{margin-left:auto}.utility-controls button{padding:6px 9px;font-size:11px}.scene-label{top:8px;left:9px;font-size:9px}.fishing-console{padding:14px 16px 8px}.catch-reveal{padding:10px 14px;width:260px}.catch-reveal img{width:64px;height:64px}.catch-reveal h2{font-size:19px;margin-bottom:4px}.catch-reveal p{font-size:11px}.catch-reveal #reveal-stats{margin-top:5px;font-size:10px}.reveal-tag{font-size:10px}.collection-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.tackle-grid{gap:10px}.tackle-card{padding:14px}.tackle-card h3{font-size:15px}.session-stats{gap:20px}.fishing-shell .cast-button{min-width:160px}.fishing-options label span{display:none}.tutorial{padding:14px;gap:12px}}
 @media(max-width:440px){.game-frame{border-width:3px}.fishing-console{border-width:3px}.scene-label{display:none}.catch-reveal{width:240px;padding:7px 12px}.catch-reveal img{width:48px;height:48px}.catch-reveal h2{font-size:17px}.catch-reveal p{font-size:10px}.catch-reveal #reveal-stats{font-size:9px}.reveal-tag{font-size:9px}.status-row p{font-size:13px}.session-stats strong{font-size:21px}.session-stats{gap:16px}.fishing-shell .cast-button{min-width:145px;font-size:14px;padding:11px 14px}.console-bottom{font-size:10px;gap:5px}.console-bottom #equipped{display:none}.collection-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.tackle-grid{grid-template-columns:1fr}.tackle-card{display:grid;grid-template-columns:72px 1fr;gap:0 12px}.tackle-card img,.tackle-card .bait-icon{grid-row:1/5;align-self:center;width:64px;height:64px;margin:0}.tackle-card p{margin:8px 0}.tackle-card small{margin-bottom:8px}.tackle-card button{grid-column:2}.fishing-shell h2{font-size:21px}.dialog-actions{flex-wrap:wrap}.fishing-options{gap:8px}}
 @media(prefers-reduced-motion:reduce){.fishing-shell *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Softer interaction shapes, coordinated with the site's pine-blue accent. */
+.fishing-shell{--f-blue:#114768}
+.fishing-shell button{border-radius:12px}
+.view-switch button,.collection-filters button{border-radius:999px}
+.view-switch button[aria-pressed=true]{background:#114768;border-color:#114768}
+.utility-controls button{border-radius:12px 5px 12px 5px}
+.fishing-shell .cast-button{background:#114768;border-radius:999px}
+.fishing-shell .cast-button:hover{background:#0b334d}
+.fishing-shell button:focus-visible,.fishing-shell input:focus-visible,.fishing-shell canvas:focus-visible,.fishing-shell summary:focus-visible{outline-color:#114768}
+.fishing-options input{accent-color:#114768}
+.game-frame{overflow:hidden;border-radius:18px 18px 0 0}
+.fishing-console{border-radius:0 0 18px 18px}
+.tutorial,.tank-frame,.collection-card,.tackle-card{border-radius:16px}
+.tank-frame{overflow:hidden}
+.collection-filters button[aria-pressed=true],.tackle-card button[aria-pressed=true]{background:#114768}
+.fishing-shell dialog{border-radius:20px 6px 20px 6px}

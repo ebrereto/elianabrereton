@@ -28,14 +28,14 @@ class Document(HTMLParser):
             self.links += [v.strip().split()[0] for v in attrs['srcset'].split(',')]
 
 def check():
-    docs = {p: Document(p.read_text()) for p in ROOT.glob('*.html')}
+    docs = {p: Document(p.read_text(encoding='utf-8')) for p in ROOT.glob('*.html')}
     failures = []
     count = 0
     for path, doc in docs.items():
         failures += [f'{path.name}: {error}' for error in doc.errors]
         if doc.h1 != 1:
             failures.append(f'{path.name}: expected one h1, found {doc.h1}')
-        if '{{' in path.read_text():
+        if '{{' in path.read_text(encoding='utf-8'):
             failures.append(f'{path.name}: unexpanded template variable')
         for href in doc.links:
             url = urlsplit(href)
@@ -51,7 +51,7 @@ def check():
                 failures.append(f'{path.name}: missing {href}')
             elif url.fragment and target in docs and url.fragment not in docs[target].ids:
                 failures.append(f'{path.name}: missing fragment {href}')
-    for asset in re.findall(r'url\([\'"]?([^\)\'\"]+)', (ROOT / 'css/site.css').read_text()):
+    for asset in re.findall(r'url\([\'"]?([^\)\'\"]+)', (ROOT / 'css/site.css').read_text(encoding='utf-8')):
         if asset.startswith('/') and not (ROOT / asset.lstrip('/')).is_file():
             failures.append('CSS missing asset: ' + asset)
     if failures:
