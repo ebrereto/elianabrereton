@@ -16,6 +16,13 @@ export function normalizeSave(input) {
       data.collection[id] = {
         count: cap(entry.count, 1e6),
         largest: typeof entry.largest === 'number' && Number.isFinite(entry.largest) ? Math.min(1000, Math.max(0, entry.largest)) : null,
+        smallest: typeof entry.smallest === 'number' && Number.isFinite(entry.smallest) ? Math.min(1000, Math.max(0, entry.smallest)) : null,
+        perfectCatches: cap(entry.perfectCatches, 1e6),
+        lastCatch: entry.lastCatch && typeof entry.lastCatch === 'object' ? {
+          isNew: Boolean(entry.lastCatch.isNew),
+          sizeRecord: Boolean(entry.lastCatch.sizeRecord),
+          perfect: Boolean(entry.lastCatch.perfect)
+        } : null,
         firstCaught: typeof entry.firstCaught === 'string' && Number.isFinite(Date.parse(entry.firstCaught)) ? new Date(entry.firstCaught).toISOString() : null
       };
     }

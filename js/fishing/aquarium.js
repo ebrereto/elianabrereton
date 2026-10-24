@@ -9,7 +9,14 @@ export function renderCollection(save, filter, onSelect) {
     button.type = 'button';button.className = `collection-card ${entry ? '' : 'undiscovered'} ${living(item) ? '' : 'shelf-item'}`;
     const img = el('img');img.src = spriteURL(item.id);img.alt = '';img.width = img.height = 64;
     button.append(img, el('span', entry ? item.name : '???', 'catch-name'), el('span', entry ? item.rarity : 'undiscovered', 'rarity'));
-    if (entry) button.append(el('span', `×${entry.count}`, 'quantity'));
+    if (entry) {
+      button.append(el('span', `×${entry.count}`, 'quantity'));
+      const badges = el('span', undefined, 'catch-badges');
+      if (entry.lastCatch?.isNew) badges.append(el('span','new','catch-badge new'));
+      if (entry.lastCatch?.sizeRecord) badges.append(el('span','record','catch-badge record'));
+      if (entry.lastCatch?.perfect) badges.append(el('span','perfect','catch-badge perfect'));
+      if (badges.childElementCount) button.append(badges);
+    }
     button.setAttribute('aria-label', entry ? `${item.name}, ${item.rarity}, caught ${entry.count}. show details` : `undiscovered ${item.category}. show hint`);
     button.addEventListener('click', () => onSelect(item)); grid.append(button);
   }
@@ -28,7 +35,7 @@ export function showDetails(item, save) {
   content.append(el('p', entry ? item.description : item.hint || 'keep casting. you never quite know who’s down there.'));
   if (entry) {
     const details = el('dl');
-    for (const [label, value] of [['number caught', String(entry.count)], ...(living(item) ? [['largest size', entry.largest ? `${entry.largest.toFixed(1)} cm` : 'not recorded']] : []), ['first caught', entry.firstCaught ? new Date(entry.firstCaught).toLocaleDateString(undefined, { year:'numeric',month:'short',day:'numeric' }).toLowerCase() : 'an earlier visit']]) {
+    for (const [label, value] of [['total caught', String(entry.count)], ...(living(item) ? [['smallest size', entry.smallest ? `${entry.smallest.toFixed(1)} cm` : 'not recorded'],['largest size', entry.largest ? `${entry.largest.toFixed(1)} cm` : 'not recorded']] : []), ['perfect catches', String(entry.perfectCatches || 0)], ['first caught', entry.firstCaught ? new Date(entry.firstCaught).toLocaleDateString(undefined, { year:'numeric',month:'short',day:'numeric' }).toLowerCase() : 'an earlier visit']]) {
       details.append(el('dt', label),el('dd',value));
     }
     content.append(details,el('span','✦ discovered','first-badge'));

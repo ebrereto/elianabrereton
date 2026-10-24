@@ -30,7 +30,7 @@ def build():
         # User preference applies to page metadata as well as visible prose.
         title = re.sub(r'(?<=\w)-(?=\w)', ' ', title).replace('—', '|').replace('–', '|')
         description = re.sub(r'(?<=\w)-(?=\w)', ' ', description).replace('—', ', ').replace('–', ', ')
-        values = {'title': escape(title), 'description': escape(description, quote=True), 'canonical': canonical, 'header': header, 'footer': footer, 'content': source.read_text(encoding='utf-8'), 'body_class': slug, 'page_assets': '<link rel="stylesheet" href="./css/fishing.css"><script type="module" src="./js/fishing/main.js"></script>' if slug == 'fishing' else ''}
+        values = {'title': escape(title), 'description': escape(description, quote=True), 'canonical': canonical, 'header': header, 'footer': footer, 'content': source.read_text(encoding='utf-8'), 'body_class': slug, 'page_assets': '<link rel="stylesheet" href="./css/fishing.css?v=20261023-quiet-habitat"><script type="module" src="./js/fishing/main.js?v=20261023-quiet-habitat"></script>' if slug == 'fishing' else ''}
         for key, value in values.items():
             page = page.replace('{{' + key + '}}', value)
         for name in ('work', 'research', 'about', 'play'):

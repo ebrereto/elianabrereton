@@ -1,5 +1,5 @@
 // Keep a useful message visible even if an asset or module cannot load.
-import('./app.js').then(({ start }) => start()).catch(error => {
+import('./app.js?v=20261023-quiet-habitat').then(({ start }) => start()).catch(error => {
   document.querySelector('#game-status').textContent = 'the dock could not load. please refresh to try again.';
   const notice = document.querySelector('#save-warning');
   notice.textContent = error.message; notice.hidden = false;

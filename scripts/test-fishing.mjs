@@ -30,25 +30,30 @@ let changes=[];
 const game=new FishingGame(()=>save,state=>changes.push(state),()=>.3);
 game.action();assert.equal(game.state,'casting');
 game.action();assert.equal(game.state,'casting');
-game.update(.8);assert.equal(game.state,'waiting');
+game.update(.95);assert.equal(game.state,'waiting');
 game.paused=true;const elapsed=game.elapsed;game.update(100);game.action();assert.equal(game.elapsed,elapsed);assert.equal(game.state,'waiting');
 game.paused=false;game.update(3);assert.equal(game.state,'bite');
 game.action();assert.equal(game.state,'timing');
 assert.ok(game.width>=.2);assert.ok(game.target>0&&game.target+game.width<1);
-game.update((game.target+game.width/2)/game.speed);game.action();assert.equal(game.state,'reeling');assert.equal(game.success,true);
-game.update(.65);assert.equal(game.state,'caught');
-game.action();game.update(.8);game.update(3);game.update(3.5);assert.equal(game.state,'escaped');assert.equal(game.reason,'bite');
-game.action();game.update(.8);game.update(3);game.action();game.action();game.update(.65);assert.equal(game.state,'escaped');assert.equal(game.reason,'timing');
+while(game.state==='timing') { game.marker=game.target+game.width/2;game.action(); }
+assert.equal(game.state,'reeling');assert.equal(game.success,true);assert.ok(game.perfects>=1);
+game.update(1.1);assert.equal(game.state,'caught');
+game.action();game.update(.95);game.update(3);game.update(3.5);assert.equal(game.state,'escaped');assert.equal(game.reason,'bite');
+game.action();game.update(.95);game.update(3);game.action();
+while(game.state==='timing') { game.marker=0;game.action(); }
+game.update(1.1);assert.equal(game.state,'escaped');assert.equal(game.reason,'line');
 assert.ok(changes.includes('caught')&&changes.includes('escaped'));
 
 // Boundary hits are catches; missing by even a little remains an escape.
 for(const offset of [0,.0001,-.0001]) {
-  const test=new FishingGame(()=>save,()=>{},()=>.3);test.action();test.update(.8);test.update(3);test.action();test.marker=test.target+offset;test.action();assert.equal(test.success,offset>=0);
+  const test=new FishingGame(()=>save,()=>{},()=>.3);test.action();test.update(.95);test.update(3);test.action();test.marker=test.target+offset;test.action();assert.equal(test.lastResult,offset>=0?'hit':'miss');
 }
 const clean=normalizeSave({ highScore:-30, rod:'ribbon', collection:{ sardine:{count:3,largest:20,firstCaught:'2026-09-14'}, nonsense:{count:2}, anchovy:{count:-10} }, muted:false });
 assert.equal(clean.highScore,0);assert.equal(clean.rod,'driftwood');assert.equal(clean.muted,false);assert.equal(totalCaught(clean),3);assert.equal(discoveries(clean),1);assert.equal(baitUnlocked(baits[1],clean),true);
 assert.equal(rodUnlocked(rods[1],clean),false);clean.collection.sardine.count=5;assert.equal(rodUnlocked(rods[1],clean),true);
 assert.equal(Object.keys(normalizeSave(JSON.parse('{"collection":{"__proto__":{"count":4},"constructor":{"count":4}}}')).collection).length,0);
+const collectible=normalizeSave({collection:{sardine:{count:2,smallest:8.2,largest:19.7,perfectCatches:1,lastCatch:{sizeRecord:true,perfect:true}}}}).collection.sardine;
+assert.equal(collectible.smallest,8.2);assert.equal(collectible.largest,19.7);assert.equal(collectible.perfectCatches,1);assert.equal(collectible.lastCatch.sizeRecord,true);assert.equal(collectible.lastCatch.perfect,true);
 for(const item of catches.slice(0,10)) clean.collection[item.id]={count:1,largest:10,firstCaught:new Date().toISOString()};
 assert.equal(rodUnlocked(rods[2],clean),true);assert.ok(distribution(clean).some(row=>row.item.id==='pearl-with-a-view'));
 const memory=new Map();const storage={getItem:key=>memory.get(key)||null,setItem:(key,value)=>memory.set(key,value),removeItem:key=>memory.delete(key)};
@@ -66,13 +71,17 @@ const context={
   clearRect(...args){args.forEach(v=>assert.ok(Number.isFinite(v)));},
   fillRect(...args){args.forEach(v=>assert.ok(Number.isFinite(v)));drawCount++;},
   drawImage(image,...args){assert.ok(image);args.forEach(v=>assert.ok(Number.isFinite(v)));},
-  save(){},restore(){},translate(...args){args.forEach(v=>assert.ok(Number.isFinite(v)));},scale(){}
+  save(){},restore(){},translate(...args){args.forEach(v=>assert.ok(Number.isFinite(v)));},scale(){},rotate(...args){args.forEach(v=>assert.ok(Number.isFinite(v)));}
 };
 const canvas={getContext:()=>context};
 const renderer=new Renderer(canvas,canvas,{base:{},sprites:Object.fromEntries(catches.map(item=>[item.id,{}]))});
 for(const state of ['idle','casting','waiting','bite','timing','reeling','caught','escaped']) for(const reduced of [false,true]) {
   renderer.dock({state,elapsed:.25},clean,3,reduced);
 }
-renderer.tank(clean,3,false);renderer.tank(clean,3,true);assert.ok(drawCount>100);
+renderer.tank(clean,3,false);assert.ok(renderer.tankFish.length>0);
+const friend=renderer.tankFish[0];assert.equal(renderer.petAquarium(friend.x+16,friend.y+16,3).id,friend.item.id);
+renderer.tank(clean,3.2,false);assert.ok(renderer.pet);
+renderer.tank(clean,3.3,false);
+renderer.tank(clean,3,true);assert.ok(drawCount>100);
 console.log('PASS: lowercase catalogue; balanced odds and bait effects; fair rare bonus; complete fishing loop; pause; timing boundaries; unlocks; save round-trip; corrupted and future saves; unavailable storage; reset.');
 console.log('PASS: all scene states and aquarium render commands, including reduced motion. Browser visual review remains separate.');
