@@ -272,12 +272,13 @@ export class Renderer {
 
       if (!(state === 'reeling' && game.success)) {
         rect(ctx, bobX - 3, bobY - 3, 6, 7, INK);
-        rect(ctx, bobX - 2, bobY - 4, 4, 4, '#ee8d82');
-        rect(ctx, bobX - 2, bobY, 4, 3, CREAM);
+        const bobber={classic:['#ee8d82',CREAM],cherry:['#bd4769','#e7a5b4'],mushroom:['#b95b61','#fff0cf'],moon:['#eadc9a','#8aa0bd']}[save.bobber]||['#ee8d82',CREAM];
+        rect(ctx, bobX - 2, bobY - 4, 4, 4, bobber[0]);rect(ctx, bobX - 2, bobY, 4, 3, bobber[1]);
       }
     } else {
       curve(ctx, tipX, tipY, tipX - 8, 118, tipX - 2, 128, CREAM);
-      rect(ctx, tipX - 4, 126, 4, 4, '#ee8d82'); rect(ctx, tipX - 4, 130, 4, 3, CREAM);
+      const bobber={classic:['#ee8d82',CREAM],cherry:['#bd4769','#e7a5b4'],mushroom:['#b95b61','#fff0cf'],moon:['#eadc9a','#8aa0bd']}[save.bobber]||['#ee8d82',CREAM];
+      rect(ctx, tipX - 4, 126, 4, 4, bobber[0]); rect(ctx, tipX - 4, 130, 4, 3, bobber[1]);
     }
 
     if (['bite', 'timing'].includes(state)) {
@@ -303,7 +304,7 @@ export class Renderer {
       rect(ctx, 181 - game.elapsed * 4, 149, 9 + game.elapsed * 10, 1, '#83cbc7');
     }
 
-    const rodColor = { driftwood: '#efc46f', 'sea-glass': '#62bfb3', ribbon: '#ee8d82' }[save.rod];
+    const rodColor = { driftwood:'#efc46f','sea-glass':'#62bfb3',ribbon:'#ee8d82',sunset:'#d78179','moon-thread':'#9ca8c7' }[save.rod]||'#efc46f';
     const bend = ['bite', 'timing', 'reeling'].includes(state) ? 5 : 0;
     line(ctx, 239, 216, 214, 172, INK, 4);
     line(ctx, 214, 172, 198 - bend, 132, INK, 3);
@@ -313,6 +314,12 @@ export class Renderer {
     line(ctx, 199 - bend, 132, tipX + 1, tipY, rodColor);
     line(ctx, 234, 202, 240, 212, CREAM, 3);
     rect(ctx, 228, 203, 5, 6, INK); rect(ctx, 229, 204, 3, 3, rodColor);
+
+    const decor=save.placedDecor||[];
+    if(decor.includes('pink-tackle-box')){rect(ctx,237,194,25,11,INK);rect(ctx,239,193,21,10,'#c4778d');rect(ctx,245,190,9,3,INK);rect(ctx,247,196,5,3,'#f3c4d2');}
+    if(decor.includes('dock-lantern')){rect(ctx,285,176,13,20,INK);rect(ctx,288,179,7,12,'#f3cf79');rect(ctx,290,176,3,3,'#fff1b5');line(ctx,286,178,292,171,INK);line(ctx,292,171,298,178,INK);}
+    if(decor.includes('potted-plant')){rect(ctx,103,190,16,12,'#a66557');for(let i=0;i<5;i++)line(ctx,111,191,104+i*3,178-(i%2)*4,i%2?'#4a8d73':'#356f67',2);}
+    if(decor.includes('pennants')){line(ctx,86,158,281,158,'#f4dfcf');for(let x=103;x<270;x+=28){rect(ctx,x,158,12,7,(x/28)%2>1?'#c4778d':'#6d8fab');rect(ctx,x+3,165,6,3,(x/28)%2>1?'#c4778d':'#6d8fab');}}
 
     if (state === 'caught' && game.item && ['rare', 'secret'].includes(game.item.rarity) && !reduced && game.elapsed < .65) {
       ctx.globalAlpha = Math.max(0, .22 - game.elapsed * .3);
@@ -345,6 +352,11 @@ export class Renderer {
     if(habitat>=2){rect(ctx,48,156,8,5,'#f0d3c0');rect(ctx,50,153,4,4,'#dc9e9f');rect(ctx,328,158,7,4,'#e8d4aa');}
     if(habitat>=3){line(ctx,238,158,292,143,'#6c4d3f',6);line(ctx,250,153,238,141,'#6c4d3f',4);rect(ctx,273,145,10,3,'#926753');}
     if(habitat>=4){rect(ctx,105,145,28,16,'#59453d');rect(ctx,107,148,24,12,'#b06f4e');rect(ctx,107,148,24,3,'#e1a368');rect(ctx,117,148,4,12,'#f0c36d');rect(ctx,105,143,28,4,'#59453d');}
+    const decor=save.placedDecor||[];
+    if(decor.includes('bubble-lamp')){rect(ctx,344,132,19,28,INK);rect(ctx,347,134,13,23,'#d8b7d7');for(let i=0;i<4;i++)rect(ctx,350+(i%2)*6,151-i*7,3,3,'#f7ecdd');}
+    if(decor.includes('shell-arch')){for(let i=0;i<7;i++){const a=Math.PI+i*Math.PI/6;rect(ctx,55+Math.cos(a)*20,157-Math.sin(a)*22,7,7,i%2?'#e5afba':'#e9d5b0');}}
+    if(decor.includes('tiny-castle')){rect(ctx,185,139,34,21,'#877b90');rect(ctx,189,132,8,28,'#9b8ca1');rect(ctx,207,130,8,30,'#9b8ca1');rect(ctx,197,151,8,9,INK);}
+    if(decor.includes('pink-coral')){for(let i=0;i<6;i++){line(ctx,302,160,291+i*5,137-(i%3)*6,i%2?'#c96f89':'#df91a4',3);}}
 
     for (let index = 0; index < 9; index++) {
       const x = 20 + index * 43, y = 151 - ((t * (6 + index % 4) + index * 17) % 125);

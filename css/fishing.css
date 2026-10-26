@@ -65,3 +65,77 @@
 
 @media(max-width:520px){.fight-summary{align-items:flex-start}.fight-beats span{min-width:0;padding:4px 7px;font-size:9px}.line-strength{gap:5px}.timing-label{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.game-frame[data-state="bite"],#line-pips.low,.timing[data-behavior="magic"] .target-zone,.timing[data-result] .meter,.catch-reveal:not([hidden]),.catch-reveal.rare:not([hidden]){animation:none!important}}
+
+/* Billy's dockside shop */
+#tackle-view{--wood:#805441;--wood-dark:#4d3840;--pink:#c4778d;--paper:#fff2d8;padding-top:4px}
+.shop-sign{width:max-content;max-width:92%;margin:8px auto -18px;position:relative;z-index:3;padding:12px 34px 15px;text-align:center;color:#fff5dc;background:#6f493b;border:3px solid #3d3540;border-radius:8px 8px 20px 20px;box-shadow:0 5px 0 #3d3540,0 12px 22px #304e6026;transform:rotate(-.7deg)}
+.shop-sign:before,.shop-sign:after{content:'';position:absolute;top:-22px;width:3px;height:24px;background:#3d3540}.shop-sign:before{left:35px}.shop-sign:after{right:35px}.shop-sign span,.shop-sign small{display:block;font:600 9px/1.2 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}.shop-sign strong{display:block;font:700 22px/1.15 Georgia,serif;letter-spacing:.01em}.shop-sign small{margin-top:4px;color:#efd6ba}
+.billy-counter{height:306px;position:relative;overflow:hidden;border:4px solid #304e60;border-radius:20px 20px 8px 8px;background:linear-gradient(#9bc6cc 0 55%,#ead3af 55%);box-shadow:0 14px 28px #304e601c}
+.billy-portrait{position:absolute;z-index:3;left:10%;bottom:68px;width:225px;height:205px;overflow:hidden;filter:drop-shadow(7px 8px 0 #304e6020);animation:billy-portrait-bob 3.8s ease-in-out infinite}.billy-portrait img{display:block;width:225px;height:auto;transform:translateY(1px);image-rendering:auto}
+.shop-window{position:absolute;inset:32px 28px 72px 48%;overflow:hidden;border:8px solid #75503f;background:linear-gradient(#94c4cc 0 58%,#548f9c 58%);box-shadow:inset 0 0 0 3px #304e60}.shop-window:after{content:'';position:absolute;left:0;right:0;top:55%;height:3px;background:#d5edf0;box-shadow:22px 16px 0 #74adb4,90px 32px 0 #75adb5,145px 10px 0 #d5edf0}.hanging-fish{position:absolute;right:22px;top:23px;color:#fff3da;font-size:42px;transform:rotate(14deg)}.window-wave{position:absolute;inset:auto 0 0;height:60px;background:repeating-linear-gradient(170deg,transparent 0 20px,#5ea1aa 21px 24px)}
+.wood-counter{position:absolute;z-index:4;left:0;right:0;bottom:0;min-height:70px;padding:18px 24px;color:#fff1d3;background:repeating-linear-gradient(90deg,#6f493b 0 70px,#805441 71px 73px);border-top:5px solid #3d3540;box-shadow:inset 0 4px #a97859;display:flex;justify-content:flex-end;align-items:center;gap:12px;font:600 11px/1.3 ui-monospace,monospace}.wood-counter strong{font-size:13px;padding:8px 12px;background:#493943;border:1px solid #b8896d;border-radius:999px}.wood-counter strong>span:first-child{color:#e7c374}
+.billy{position:absolute;z-index:2;left:17%;bottom:52px;width:150px;height:200px;filter:drop-shadow(8px 8px 0 #304e6024);animation:billy-bob 3.8s ease-in-out infinite}.billy-head{position:absolute;left:25px;top:41px;width:104px;height:83px;border:4px solid #3f3540;border-radius:46% 46% 40% 40%;background:#c7774e;box-shadow:inset 0 -12px #b7664a}.billy-ear{position:absolute;z-index:-1;top:28px;width:39px;height:45px;background:#c7774e;border:4px solid #3f3540;transform:rotate(45deg)}.billy-ear.left{left:20px}.billy-ear.right{right:17px}.billy-head:before{content:'•  •';position:absolute;top:26px;left:30px;color:#3f3540;font:bold 25px/1 monospace;letter-spacing:17px}.billy-head:after{content:'ᴗ';position:absolute;left:45px;top:48px;color:#3f3540;font:bold 22px/1 monospace}.billy-head i,.billy-head b{position:absolute;top:51px;width:28px;height:2px;background:#3f3540}.billy-head i{left:-16px;transform:rotate(7deg)}.billy-head b{right:-16px;transform:rotate(-7deg)}.billy-hat{position:absolute;z-index:2;left:26px;top:21px;width:102px;height:34px;border:4px solid #3f3540;border-radius:50% 50% 12px 12px;background:#345f79;box-shadow:inset 0 8px #557e91}.billy-hat:after{content:'';position:absolute;right:-20px;bottom:-5px;width:45px;height:9px;background:#345f79;border:4px solid #3f3540;border-radius:8px}.billy-body{position:absolute;left:35px;top:116px;width:88px;height:93px;border:4px solid #3f3540;border-radius:34px 34px 8px 8px;background:#d3b189;box-shadow:inset 0 18px #4f7c77}.billy-body:after{content:'B';position:absolute;left:34px;top:32px;color:#6f493b;font:bold 24px Georgia}.billy-paw{position:absolute;z-index:3;left:111px;top:134px;width:58px;height:24px;border:4px solid #3f3540;border-radius:18px;background:#c7774e;transform:rotate(-8deg);transform-origin:left center;animation:billy-wave 7.6s steps(2,end) infinite}
+.billy-speech{position:absolute;z-index:3;left:46%;top:56px;width:min(270px,43%);padding:16px 18px!important;border:3px solid #304e60;border-radius:18px 18px 18px 4px;background:#fff8e8;color:#304e60;font:600 14px/1.45 Georgia,serif!important;box-shadow:4px 5px 0 #304e6026}.billy-speech:after{content:'';position:absolute;left:-13px;bottom:15px;border:8px solid transparent;border-right-color:#304e60}
+.shop-heading{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:34px 3px 13px}.shop-heading p{font:600 9px/1.2 ui-monospace,monospace!important;letter-spacing:.11em;text-transform:uppercase;color:#9a6071}.shop-heading h3{margin:3px 0 0;font:700 22px/1.1 Georgia,serif}.shop-heading>small{color:#647780;font-size:10px}.shop-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.shop-card{display:grid;grid-template-columns:58px 1fr;gap:2px 12px;padding:15px;background:linear-gradient(145deg,#fff8e8,#f7e8ca);border:1px solid #d1b993;border-radius:16px 6px 16px 6px;box-shadow:2px 3px 0 #304e6015;min-height:156px}.shop-card.owned{background:linear-gradient(145deg,#eef3e9,#dde9e3);border-color:#aac4bb}.shop-item-icon{grid-row:1/3;width:56px;height:56px;display:grid;place-items:center;background:#ead8bc;border:2px solid #5b4850;border-radius:14px 5px 14px 5px;font-size:30px;filter:saturate(.75)}.shop-card h4{margin:2px 0 5px;font:700 15px/1.15 Georgia,serif}.shop-card p{margin:0 0 8px;font-size:11px;line-height:1.4}.shop-card small{display:block;color:#806178;font:600 10px/1.3 ui-monospace,monospace}.shop-card button{grid-column:1/3;margin-top:11px;width:100%;min-height:38px;padding:6px 10px;background:#fff8e8}.shop-card button:not(:disabled):hover{background:#ecd4dc}.shop-card button[aria-pressed=true]{background:#114768;color:#fff5dc}.shop-grid.compact{grid-template-columns:repeat(4,minmax(0,1fr))}.shop-grid.compact .shop-card{grid-template-columns:46px 1fr;min-height:140px;padding:12px}.shop-grid.compact .shop-item-icon{width:44px;height:44px;font-size:23px}.owned-heading{border-top:1px dashed #b9a887;padding-top:26px}.odds{background:#fff8e8;border:1px solid #d5c6a6;border-radius:14px;padding:16px;margin-top:28px}.odds summary{font-family:Georgia,serif;font-weight:700}
+@keyframes billy-bob{50%{transform:translateY(3px)}}@keyframes billy-wave{0%,82%,100%{transform:rotate(-8deg)}86%{transform:rotate(-27deg)}90%{transform:rotate(6deg)}}@keyframes billy-portrait-bob{50%{transform:translateY(4px)}}
+@media(max-width:720px){.shop-grid,.shop-grid.compact{grid-template-columns:repeat(2,minmax(0,1fr))}.billy-portrait{left:4%;width:205px}.billy-portrait img{width:205px}.shop-window{left:42%}.billy-speech{left:48%;width:46%;font-size:12px!important}}
+@media(max-width:440px){.session-stats span:nth-child(2){display:none}.billy-counter{height:278px}.billy-portrait{left:-7%;bottom:65px;width:185px;height:190px}.billy-portrait img{width:185px}.billy-speech{left:43%;top:48px;width:52%;padding:12px!important}.shop-window{inset:24px 14px 68px 35%}.wood-counter{padding:14px}.shop-grid,.shop-grid.compact{grid-template-columns:1fr}.shop-sign strong{font-size:18px}.shop-card{min-height:0}}
+@media(prefers-reduced-motion:reduce){.billy,.billy-paw,.billy-portrait{animation:none!important}}
+
+/* The inventory continues Billy's wooden counter as one wall of little cubbies. */
+#tackle-view{padding:4px 18px 30px;background:repeating-linear-gradient(90deg,#704938 0 118px,#7e5440 119px 122px);border:4px solid #304e60;border-radius:20px 20px 10px 10px;box-shadow:0 16px 30px #304e6024}
+#tackle-view .shop-sign{margin-top:-2px}
+#tackle-view .billy-counter{margin-inline:-18px;border-inline:0;border-radius:0}
+#tackle-view .shop-heading{margin:0;padding:27px 10px 12px;border-inline:3px solid #49343a;background:#704938;color:#fff1d3;align-items:end}
+#tackle-view .shop-heading:first-of-type{padding-top:30px}
+#tackle-view .shop-heading h3{color:#fff1d3;text-shadow:1px 2px 0 #3f3035}
+#tackle-view .shop-heading>small{color:#e5caae}
+#tackle-view .shop-heading.owned-heading{padding-top:32px;border-top:7px solid #49343a}
+#tackle-view .shop-heading.owned-heading p{color:#e3b0bb}
+#tackle-view .shop-grid{position:relative;gap:8px;padding:8px;background:#49343a;border:3px solid #49343a;border-top-width:7px;box-shadow:inset 0 3px 0 #9d7054}
+#tackle-view .shop-grid:after{content:'';position:absolute;left:-3px;right:-3px;bottom:-8px;height:9px;background:#3f3035;border-top:2px solid #9d7054;box-shadow:0 4px 0 #2f2930;z-index:2}
+#tackle-view .shop-card{position:relative;min-height:168px;padding:16px;color:#fff4dc;background:linear-gradient(145deg,#76503f,#5c4038);border:2px solid #a87b5c;border-radius:3px;box-shadow:inset 0 0 0 2px #3f3035,4px 4px 0 #332a2f}
+#tackle-view .shop-card:before{content:'';position:absolute;inset:5px;pointer-events:none;border-top:1px solid #a5785d;border-left:1px solid #8e6550;opacity:.72}
+#tackle-view .shop-card.owned{background:linear-gradient(145deg,#49665f,#354f4f);border-color:#789891;box-shadow:inset 0 0 0 2px #293d42,4px 4px 0 #332a2f}
+#tackle-view .shop-card h4{position:relative;color:#fff4dc;text-shadow:1px 1px 0 #2f2930}
+#tackle-view .shop-card p{position:relative;color:#ead8c0}
+#tackle-view .shop-card small{position:relative;color:#f0c7cf}
+#tackle-view .shop-item-icon{position:relative;background:#f4e3c7;border-color:#352d33;box-shadow:inset 0 0 0 2px #c99d79,2px 2px 0 #2f2930}
+#tackle-view .shop-card button{position:relative;border-color:#cda884;background:#f9edd5;color:#3f3540;box-shadow:0 2px 0 #332a2f}
+#tackle-view .shop-card button:not(:disabled):hover{background:#f1cfda}
+#tackle-view .shop-card button[aria-pressed=true]{background:#c78497;border-color:#f0bbc9;color:#fff8e8}
+#tackle-view .shop-card button:disabled{background:#d9c9ad;color:#685b57}
+#tackle-view .fishing-end{border-color:#9d7054}
+@media(max-width:720px){#tackle-view{padding-inline:12px}#tackle-view .billy-counter{margin-inline:-12px}}
+@media(max-width:440px){#tackle-view{padding-inline:8px}#tackle-view .billy-counter{margin-inline:-8px}#tackle-view .shop-card{min-height:0}}
+
+/* Warmer rosewood shelves, with the player's belongings kept off the sales wall. */
+#tackle-view{background:repeating-linear-gradient(90deg,#965f4e 0 118px,#a96e59 119px 122px)}
+#tackle-view .shop-heading{background:#985f4d;border-color:#65403d}
+#tackle-view .shop-grid{background:#65403d;border-color:#65403d;box-shadow:inset 0 3px 0 #c18a6e}
+#tackle-view .shop-grid:after{background:#58383a;border-top-color:#c18a6e;box-shadow:0 4px 0 #402f34}
+#tackle-view .shop-card{background:linear-gradient(145deg,#a56d58,#825244);border-color:#d29a79;box-shadow:inset 0 0 0 2px #65403d,4px 4px 0 #4d3437}
+#tackle-view .shop-card:before{border-color:#d4a083;opacity:.66}
+#tackle-view .shop-card.owned{background:linear-gradient(145deg,#5f7770,#46625f);border-color:#96afa5}
+.owned-zone{margin:38px -18px -30px;padding:0 18px 30px;background:#f7eedc;border-top:4px solid #304e60;border-radius:0 0 7px 7px}
+#tackle-view .owned-zone .shop-heading{padding:28px 3px 14px;background:transparent;border:0;color:#304e60}
+#tackle-view .owned-zone .shop-heading h3{color:#304e60;text-shadow:none}
+#tackle-view .owned-zone .shop-grid{padding:0;gap:13px;background:transparent;border:0;box-shadow:none}
+#tackle-view .owned-zone .shop-grid:after{display:none}
+#tackle-view .owned-zone .shop-card,#tackle-view .owned-zone .shop-card.owned{min-height:140px;padding:12px;color:#304e60;background:linear-gradient(145deg,#eef3e9,#dde9e3);border:1px solid #aac4bb;border-radius:16px 6px 16px 6px;box-shadow:2px 3px 0 #304e6015}
+#tackle-view .owned-zone .shop-card:before{display:none}
+#tackle-view .owned-zone .shop-card h4{color:#304e60;text-shadow:none}
+#tackle-view .owned-zone .shop-card p{color:#304e60}
+#tackle-view .owned-zone .shop-card small{color:#806178}
+#tackle-view .owned-zone .shop-item-icon{background:#ead8bc;border:2px solid #5b4850;box-shadow:none}
+#tackle-view .owned-zone .shop-card button{background:#fff8e8;border-color:#8fa6ac;box-shadow:none}
+#tackle-view .owned-zone .shop-card button[aria-pressed=true]{background:#114768;border-color:#114768;color:#fff5dc}
+@media(max-width:720px){.owned-zone{margin-inline:-12px;padding-inline:12px}}
+@media(max-width:440px){.owned-zone{margin-inline:-8px;padding-inline:8px}}
+
+/* Illustrated shop interior behind Billy; the counter and character remain live layers. */
+.billy-counter{background-image:linear-gradient(90deg,rgba(70,42,39,.04),rgba(70,42,39,0)),url('../assets/fishing/billy-shop-background.png');background-size:cover;background-position:center;background-repeat:no-repeat}
+.billy-portrait{filter:drop-shadow(0 0 3px #fff1d0) drop-shadow(7px 8px 0 #3e292d42)}
+.billy-speech{left:40%;top:48px;width:31%;background:#fff8e8f2}
+@media(max-width:720px){.billy-speech{left:39%;width:34%;font-size:11px!important}.billy-counter{background-position:48% center}}
+@media(max-width:440px){.billy-speech{left:42%;top:42px;width:45%;font-size:10px!important}.billy-counter{background-position:44% center}}

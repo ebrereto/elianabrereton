@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" href="./img/flower-favicon.png?v=20261022-flower">
   <link rel="stylesheet" href="./css/site.css?v=20261022-photo-motion">
   <script src="./js/site.js" defer></script>
-<link rel="stylesheet" href="./css/fishing.css?v=20261023-quiet-habitat"><script type="module" src="./js/fishing/main.js?v=20261023-quiet-habitat"></script>
+<link rel="stylesheet" href="./css/fishing.css?v=20261026-billy-interior"><script type="module" src="./js/fishing/main.js?v=20261026-billy-interior"></script>
 </head>
 <body class="page-fishing">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -38,7 +38,7 @@
     <div class="view-switch" role="group" aria-label="game screens">
       <button type="button" data-view="fish" aria-pressed="true">fish</button>
       <button type="button" data-view="aquarium" aria-pressed="false">aquarium <span id="collection-count">0/24</span></button>
-      <button type="button" data-view="tackle" aria-pressed="false">tackle <span id="unlock-dot" hidden aria-label="new tackle available">●</span></button>
+      <button type="button" data-view="tackle" aria-pressed="false">tackle shop</button>
     </div>
     <div class="utility-controls">
       <button type="button" id="sound" aria-pressed="false">sound: off</button>
@@ -68,7 +68,7 @@
           <div id="target-zone" class="target-zone"><span class="perfect-zone" aria-hidden="true"></span><span aria-hidden="true">✓</span></div><div id="marker" class="marker" aria-hidden="true"></div>
         </div>
       </div>
-      <div class="action-row"><div class="session-stats"><span>session <strong id="session-score">0</strong></span><span>best <strong id="best-score">0</strong></span></div><button id="action" class="cast-button" type="button" disabled>loading…</button></div>
+      <div class="action-row"><div class="session-stats"><span>session <strong id="session-score">0</strong></span><span>best <strong id="best-score">0</strong></span><span>shells <strong id="coin-total">0</strong></span></div><button id="action" class="cast-button" type="button" disabled>loading…</button></div>
       <div class="console-bottom"><span>space, click, or tap <span aria-hidden="true">·</span> <span id="equipped">driftwood rod</span></span><button type="button" id="new-session">new session</button></div>
     </div>
     <div class="tutorial" id="tutorial" hidden><p><strong>a little how-to</strong> cast your line, then hook it when the bobber plunges. keep pulling inside the striped zone through the fight, then make one last easier pull to land your catch. you have three points of line strength, and perfect centre hits can restore one.</p><button type="button" id="dismiss-tutorial" aria-label="close instructions">got it</button></div>
@@ -81,9 +81,15 @@
     <div id="collection-grid" class="collection-grid"></div>
   </section>
   <section id="tackle-view" aria-label="tackle" hidden>
-    <h3 class="tackle-label">your rods</h3><div id="rods" class="tackle-grid"></div>
-    <h3 class="tackle-label">a little bait</h3><div id="baits" class="tackle-grid"></div>
-    <details class="odds"><summary>what are my chances?</summary><div id="odds-content"></div><p>after 10 casts without a rare or secret catch, their odds gently rise until you land one. a special shell joins the pool after 8 discoveries. nothing needs a particular rod, time of day, or return visit.</p></details>
+    <div class="shop-sign"><span>billy's</span><strong>tackle &amp; trinkets</strong><small>open daily, weather permitting</small></div>
+    <div class="billy-counter">
+      <div class="billy-portrait"><img src="./assets/fishing/billy.png" alt="billy, a friendly orange sailor cat waving from behind the counter"></div>
+      <p id="billy-says" class="billy-speech">oh. it's you. I've seen you 'round the beach. catch anything good?</p>
+      <div class="wood-counter"><strong><span aria-hidden="true">◉</span> <span id="shop-coins">0</span> shell coins</strong></div>
+    </div>
+    <div class="shop-heading"><div><h3>everyday tackle</h3></div><small>always in stock</small></div><div id="everyday-stock" class="shop-grid"></div>
+    <div class="shop-heading"><div><h3>billy's beach finds</h3></div><small>four new finds each day</small></div><div id="daily-stock" class="shop-grid"></div>
+    <div class="owned-zone"><div class="shop-heading owned-heading"><div><h3>your tackle &amp; decorations</h3></div></div><div id="owned-stock" class="shop-grid compact"></div></div>
   </section>
   <p id="unlock-message" class="unlock-message" role="status" hidden></p>
   <div class="fishing-end"><button type="button" id="reset">reset progress</button></div>

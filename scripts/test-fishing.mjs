@@ -3,7 +3,8 @@ import { readFile } from 'node:fs/promises';
 
 // Load the static catalogue in Node without a network or browser dependency.
 globalThis.fetch = async url => ({ ok: true, json: async () => JSON.parse(await readFile(url,'utf8')) });
-const { catches, distribution, chooseCatch, totalCaught, discoveries, rodUnlocked, rods, baitUnlocked, baits } = await import('../js/fishing/catches.js');
+const { catches, distribution, chooseCatch, totalCaught, discoveries, rods, baits } = await import('../js/fishing/catches.js');
+const { dailyStock, coinReward, buy, toggleDecor } = await import('../js/fishing/shop.js');
 const { FishingGame } = await import('../js/fishing/game.js');
 const { freshSave, normalizeSave, createStore, SAVE_KEY } = await import('../js/fishing/save.js');
 const { Renderer } = await import('../js/fishing/renderer.js');
@@ -49,13 +50,15 @@ for(const offset of [0,.0001,-.0001]) {
   const test=new FishingGame(()=>save,()=>{},()=>.3);test.action();test.update(.95);test.update(3);test.action();test.marker=test.target+offset;test.action();assert.equal(test.lastResult,offset>=0?'hit':'miss');
 }
 const clean=normalizeSave({ highScore:-30, rod:'ribbon', collection:{ sardine:{count:3,largest:20,firstCaught:'2026-09-14'}, nonsense:{count:2}, anchovy:{count:-10} }, muted:false });
-assert.equal(clean.highScore,0);assert.equal(clean.rod,'driftwood');assert.equal(clean.muted,false);assert.equal(totalCaught(clean),3);assert.equal(discoveries(clean),1);assert.equal(baitUnlocked(baits[1],clean),true);
-assert.equal(rodUnlocked(rods[1],clean),false);clean.collection.sardine.count=5;assert.equal(rodUnlocked(rods[1],clean),true);
+assert.equal(clean.highScore,0);assert.equal(clean.rod,'driftwood');assert.equal(clean.muted,false);assert.equal(totalCaught(clean),3);assert.equal(discoveries(clean),1);assert.ok(clean.owned.includes('seaweed'));assert.ok(clean.coins>0);
 assert.equal(Object.keys(normalizeSave(JSON.parse('{"collection":{"__proto__":{"count":4},"constructor":{"count":4}}}')).collection).length,0);
 const collectible=normalizeSave({collection:{sardine:{count:2,smallest:8.2,largest:19.7,perfectCatches:1,lastCatch:{sizeRecord:true,perfect:true}}}}).collection.sardine;
 assert.equal(collectible.smallest,8.2);assert.equal(collectible.largest,19.7);assert.equal(collectible.perfectCatches,1);assert.equal(collectible.lastCatch.sizeRecord,true);assert.equal(collectible.lastCatch.perfect,true);
 for(const item of catches.slice(0,10)) clean.collection[item.id]={count:1,largest:10,firstCaught:new Date().toISOString()};
-assert.equal(rodUnlocked(rods[2],clean),true);assert.ok(distribution(clean).some(row=>row.item.id==='pearl-with-a-view'));
+assert.ok(distribution(clean).some(row=>row.item.id==='pearl-with-a-view'));
+assert.deepEqual(dailyStock(new Date(2026,9,26)).map(item=>item.id),dailyStock(new Date(2026,9,26)).map(item=>item.id));assert.equal(dailyStock().length,4);
+assert.equal(coinReward(catches[0],{first:true,sizeRecord:true,perfect:true},()=>0),14);
+const shopper=freshSave();shopper.coins=100;assert.equal(buy(shopper,'pink-tackle-box'),true);assert.equal(shopper.coins,68);assert.ok(shopper.placedDecor.includes('pink-tackle-box'));assert.equal(buy(shopper,'pink-tackle-box'),false);assert.equal(toggleDecor(shopper,'pink-tackle-box'),true);assert.ok(!shopper.placedDecor.includes('pink-tackle-box'));
 const memory=new Map();const storage={getItem:key=>memory.get(key)||null,setItem:(key,value)=>memory.set(key,value),removeItem:key=>memory.delete(key)};
 let warnings=[];let store=createStore(storage,message=>warnings.push(message));
 assert.deepEqual(store.load(),freshSave());assert.equal(store.save(clean),true);assert.deepEqual(store.load(),normalizeSave(clean));
@@ -79,9 +82,11 @@ for(const state of ['idle','casting','waiting','bite','timing','reeling','caught
   renderer.dock({state,elapsed:.25},clean,3,reduced);
 }
 renderer.tank(clean,3,false);assert.ok(renderer.tankFish.length>0);
+const decorated={...clean,placedDecor:['pink-tackle-box','dock-lantern','pennants','potted-plant','bubble-lamp','shell-arch','tiny-castle','pink-coral'],bobber:'moon',rod:'moon-thread'};
+renderer.dock({state:'idle',elapsed:.25},decorated,3,false);renderer.tank(decorated,3,false);
 const friend=renderer.tankFish[0];assert.equal(renderer.petAquarium(friend.x+16,friend.y+16,3).id,friend.item.id);
 renderer.tank(clean,3.2,false);assert.ok(renderer.pet);
 renderer.tank(clean,3.3,false);
 renderer.tank(clean,3,true);assert.ok(drawCount>100);
-console.log('PASS: lowercase catalogue; balanced odds and bait effects; fair rare bonus; complete fishing loop; pause; timing boundaries; unlocks; save round-trip; corrupted and future saves; unavailable storage; reset.');
+console.log('PASS: catalogue; odds and bait effects; fishing loop; shop rotation, rewards and purchases; v1 migration; save safety; reset.');
 console.log('PASS: all scene states and aquarium render commands, including reduced motion. Browser visual review remains separate.');

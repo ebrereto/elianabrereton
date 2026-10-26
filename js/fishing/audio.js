@@ -16,7 +16,7 @@ export class FishingAudio {
       pet: [659, 880, 1047],
       pull: [360, 480], perfect: [660, 880, 1100], strain: [180, 150],
       land: [392, 523, 659], caught: [523, 659, 784], rare: [523, 659, 784, 1047],
-      escaped: [300, 240]
+      escaped: [300, 240], coin: [784, 1047, 1319], equip: [392, 587]
     }[kind] || [440];
     notes.forEach((frequency, index) => {
       const oscillator = this.context.createOscillator(), gain = this.context.createGain();
