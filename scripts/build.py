@@ -13,6 +13,8 @@ PAGES = {
     'index': ('Eliana Brereton - Portfolio', 'Recruiter at PostHog with a research background in AI ethics. Explore my work, research, and interests.', '/', ''),
     'work': ('Work | Eliana Brereton', 'Selected recruiting and accessibility work, followed by my professional history.', '/work.html', 'work'),
     'research': ('Research | Eliana Brereton', 'Research into AI ethics, algorithmic hiring, and AI-generated interview assessments. Papers, results, and figures.', '/research.html', 'research'),
+    'blog': ('Blog | Eliana Brereton', 'Notes on building, technology, research, and the occasional tiny fishing game.', '/blog.html', 'blog'),
+    'blog-fishing-game': ('I put a fishing game on my portfolio | Eliana Brereton', 'How a small browser game became an aquarium, an economy, and a tackle shop run by a grumpy sailor cat.', '/blog-fishing-game.html', 'blog'),
     'about': ('About | Eliana Brereton', 'My background in psychology and AI ethics, education, Ethics Bowl leadership, and interests outside work.', '/about.html', 'about'),
     'MRPfigures': ('Research Figures | Eliana Brereton', 'Figures and graphs from my MA research on AI-generated hiring assessments.', '/MRPfigures.html', 'research'),
 }
@@ -33,7 +35,7 @@ def build():
         values = {'title': escape(title), 'description': escape(description, quote=True), 'canonical': canonical, 'header': header, 'footer': footer, 'content': source.read_text(encoding='utf-8'), 'body_class': slug, 'page_assets': '<link rel="stylesheet" href="./css/fishing.css?v=20261027-billy-easter-egg"><script type="module" src="./js/fishing/main.js?v=20261027-billy-easter-egg"></script>' if slug == 'fishing' else ''}
         for key, value in values.items():
             page = page.replace('{{' + key + '}}', value)
-        for name in ('work', 'research', 'about', 'play'):
+        for name in ('work', 'research', 'blog', 'about', 'play'):
             page = page.replace('{{' + name + '_current}}', 'aria-current="page"' if active == name else '')
         (ROOT / (slug + '.html')).write_text(page, encoding='utf-8')
     # Old incoming links remain valid. The fallback link also works without JS.

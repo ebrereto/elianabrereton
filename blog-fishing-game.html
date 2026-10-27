@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>I put a fishing game on my portfolio | Eliana Brereton</title>
+  <meta name="description" content="How a small browser game became an aquarium, an economy, and a tackle shop run by a grumpy sailor cat.">
+  <meta name="author" content="Eliana Brereton">
+  <link rel="canonical" href="https://eliana.brereton.me/blog-fishing-game.html">
+  <meta property="og:title" content="I put a fishing game on my portfolio | Eliana Brereton">
+  <meta property="og:description" content="How a small browser game became an aquarium, an economy, and a tackle shop run by a grumpy sailor cat.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://eliana.brereton.me/blog-fishing-game.html">
+  <link rel="icon" type="image/png" href="./img/flower-favicon.png?v=20261022-flower">
+  <link rel="stylesheet" href="./css/site.css?v=20261027-blog-revision-2">
+  <script src="./js/site.js" defer></script>
+
+</head>
+<body class="page-blog-fishing-game">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="wordmark" href="./" aria-label="Eliana Brereton, home">eliana brereton<span aria-hidden="true">.</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" hidden>Menu <span aria-hidden="true">+</span></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="./work.html" >Work</a>
+      <a href="./research.html" >Research</a>
+      <a href="./blog.html" aria-current="page">Blog</a>
+      <a href="./about.html" >About</a>
+      <a href="./fishing.html" >Play</a>
+      <a class="resume-link" href="./img/web_resume_2026.pdf">Résumé <span class="file-label">PDF</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1"><article class="blog-post">
+  <header class="blog-post-hero shell">
+    <div class="blog-post-heading" data-reveal>
+      <a class="blog-back" href="./blog.html">← all posts</a>
+      <p class="eyebrow">BLOG / 01 / MAKING THINGS</p>
+      <h1>I put a fishing game on my portfolio</h1>
+      <div class="blog-byline"><span>By Eliana Brereton</span><span>October 2026</span><span>7 min read</span></div>
+    </div>
+    <div class="blog-post-art" aria-hidden="true" data-reveal>
+      <span class="blog-art-sun"></span>
+      <span class="blog-art-water"></span>
+      <img src="./assets/fishing/billy.png?v=20261027-sailor" alt="" width="1296" height="1296">
+    </div>
+  </header>
+
+  <div class="blog-reading shell">
+    <aside class="blog-toc" aria-label="In this post">
+      <p class="eyebrow">IN THIS POST</p>
+      <ol>
+        <li><a href="#fun">Was it actually fun?</a></li>
+        <li><a href="#personality">Giving catches personality</a></li>
+        <li><a href="#aquarium">Somewhere to live</a></li>
+        <li><a href="#billy">Enter Billy</a></li>
+        <li><a href="#accessible">Accessibility</a></li>
+        <li><a href="#ai">Building with AI</a></li>
+        <li><a href="#document">What I learned</a></li>
+      </ol>
+    </aside>
+
+    <div class="blog-prose">
+      <p class="blog-lede">My web portfolio has all the normal things you would expect from anyone: work experience, research, education, a résumé, and a free-to-play fishing game. Totally normal stuff. Well, maybe except the fishing game.</p>
+
+      <p>I helped develop my first game during a company hackathon at PostHog, and the experience left me wondering whether I could make a small game of my own. Not a case study about a hypothetical game. Not a Figma mockup. Something people could actually play.</p>
+
+      <p>I’ve always been super fond of fishing (not that I’ve actually <em>done</em> it a lot, I just love the concept and the few times I’ve been. I guess you could say I’m a bit of a poser in this way). The original idea was very reasonable: you cast a line, catch a fish, and add it to a little collection.</p>
+
+      <p>Then I added an aquarium. Then rods and bait. Then an in-game currency made of shells. Then a daily shop run by a sailor cat named Billy.</p>
+
+      <p>This is how my small project became less small.</p>
+
+      <section id="fun">
+        <h2>My first question was whether it was actually fun.</h2>
+        <p>I knew I wanted the game to feel calm and slightly silly. I didn’t want there to be any urgent missions, no energy system, and no punishment for leaving. You just stand on a dock, cast your line, and wait for something to bite. Also, you get way more bites than you do while you actually fish (or else the game would be super mega boring).</p>
+        <p>Once it does, you have to keep your pull inside a moving target while trying not to lose your line. The mechanic is quite simple, but getting it to feel good was much harder than describing it.</p>
+      </section>
+
+      <aside class="blog-pullquote"><p>Most of the work was adjusting tiny things until the same basic action felt pleasant enough to repeat.</p></aside>
+
+      <section id="personality">
+        <h2>The fish + items needed personalities.</h2>
+        <p>There are 24 things to discover (as of now, I want to add more), although “fish” becomes a fairly loose category.</p>
+        <p>You can catch an anchovy that would prefer not to discuss pizza, a flounder that is a firm believer in lying down, and a mackerel dressed for a very small business meeting.</p>
+        <p>You can also pull up things like a soggy sock, a polite tin, a left sandal still looking for its sole mate, and a very small crown whose shrimp owner is presumably having a difficult day.</p>
+        <p>Writing these fun item descriptions became one of my favourite parts of the project.</p>
+        <p>The descriptions don’t change the gameplay at all. They do not make the game more technically impressive. They do, however, make each catch feel like it belongs in this particular little world.</p>
+      </section>
+
+      <section id="aquarium">
+        <h2>How can the fish have personalities but nowhere to live?</h2>
+        <p>Originally, the collection could have been a checklist. Catch an item, fill a square, move on.</p>
+        <p>Instead, I decided to make the living catches appear in an aquarium. They swim around together, and you can tap them to say hello. The nonliving discoveries go on a shelf.</p>
+        <p>There is no strategic reason to visit the aquarium. It does not make your rod stronger or improve your odds. It just lets you see the little creatures you found.</p>
+        <p>I really love that it has no practical purpose. Growing up, I played a lot of Animal Crossing. Going to the museum and seeing all my fossils, fish and everything else and just basking in awe of all the cool stuff I found was always one of my favourite parts of the game.</p>
+        <p>Games are full of systems designed to push people toward the next reward. I wanted at least one part of this game to exist simply because it is nice and fun to look at the fish.</p>
+      </section>
+
+      <section id="billy">
+        <h2>Should I add some sort of proper character to the game for memorability? <span>(short answer: yes)</span></h2>
+        <p>At some point, a tackle menu turned into an actual tackle shop. That, of course, meant it needed a shopkeeper.</p>
+        <p>Billy is a scruffy grey-brown tabby in a sailor outfit. He sells rods, bait, and decorations in exchange for shell coins. His beach finds change each day, and you can tap him to say hello.</p>
+        <p>None of this was in the sensible original plan, but Billy made the game feel less like a collection of menus and more like a place. It is much more enjoyable to buy a ribbon rod from a mildly judgmental sailor cat than from a button labelled “unlock.”</p>
+        <p>Again, took some inspo from some of my favourite games + characters here (shoutout <em>Blathers + Gulliver</em> from <strong>Animal Crossing</strong>, as well as <em>Willy</em> from <strong>Stardew Valley</strong>).</p>
+        <p>This was also where I accepted that the project was no longer a tiny fishing minigame. It had become a tiny fishing minigame with an economy, a shopkeeper, daily stock, persistent progress, and an aquarium full of pettable sea creatures. Something I kept thinking about on my own time and wanting to add “just one more thing to”.</p>
+        <p>This is a perfectly normal addition to a professional portfolio, right? 😅</p>
+      </section>
+
+      <section id="accessible">
+        <h2>I wanted it to be accessible</h2>
+        <p>The game works with a keyboard, mouse, or touch screen. Every part of fishing can be controlled with one main action button, so playing does not depend on precise or complicated inputs.</p>
+        <p>The important visual information also appears as text. The game tells you when there is a bite, what part of the catch sequence you are in, and whether you should keep pulling. It can be paused at any time, and the pause screen simply says, “take your time.”</p>
+        <p>I previously worked in digital accessibility, so these details were not something I wanted to think about at the very end. They shaped the game from the beginning.</p>
+        <p>It is still a small browser game, and I am sure there are things I could improve. But making something playful did not feel like a reason to stop caring about who could play it.</p>
+      </section>
+
+      <section id="ai">
+        <h2>I built it with help from AI</h2>
+        <p>I’m not a professional programmer. Despite my brothers constantly telling me to learn how to code since the age of 10 or so, I never did. I would say I’m a bit of a “vibe-coder”, though, if that term doesn’t make you cringe too much. I made the game (and my entire portfolio tbh) with help from GPT-6 Astra.</p>
+        <p>AI helped me turn all of my ideas into working code, troubleshoot problems, and keep iterating as the project grew. It made building something at this scale much more approachable for me (someone who doesn’t really know how to code more than a loop).</p>
+        <p>It did not remove the need to make decisions.</p>
+        <p>I still had to decide what the game should feel like, which ideas belonged, what was confusing, what was technically working but not enjoyable, and when one small improvement had accidentally created three new problems.</p>
+        <p>AI could help me implement a shop; but it couldn’t tell me whether the shop needed to exist, or that it should clearly be operated by a grumpy sailor cat named Billy.</p>
+        <p>That part required judgment. <em>Very</em> serious judgment.</p>
+      </section>
+
+      <section id="document">
+        <h2>Future me: better document the process, pls</h2>
+        <p>I wish I had a beautiful series of progress screenshots showing the game slowly coming together for this blog post.</p>
+        <p>I do not. That’s probably my biggest learning for whatever I want to make next. I think this post would be much nicer with an actual inclusion of how I went from nothing to the game as it is now.</p>
+        <p>This was not a project I made so I could document myself making a project. I made it because I wanted to find out whether I could create something that was genuinely fun to play.</p>
+        <p class="blog-final-thought">I think I did.</p>
+      </section>
+    </div>
+  </div>
+
+  <section class="blog-play-cta">
+    <div class="shell">
+      <div>
+        <p class="eyebrow">ONE LAST THING</p>
+        <h2>You can play the fishing game here.</h2>
+        <p>Please tell Billy I sent you.</p>
+        <a class="button" href="./fishing.html">Go fishing <span aria-hidden="true">→</span></a>
+      </div>
+      <img src="./assets/fishing/billy.png?v=20261027-sailor" alt="Billy, the game’s scruffy sailor cat shopkeeper" width="1296" height="1296">
+    </div>
+  </section>
+</article>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="shell">
+    <div class="footer-top">
+      <div><h2 class="eyebrow">Connect with me:</h2></div>
+      <div class="contact-links">
+        <a class="email-link" href="mailto:eliana@brereton.me">eliana@brereton.me <span aria-hidden="true">↗</span></a>
+        <div class="social-links"><a href="https://www.linkedin.com/in/eliana-brereton-18495a205/">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/ebrereto">GitHub <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Eliana Brereton</span><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
