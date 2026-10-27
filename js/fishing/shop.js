@@ -1,10 +1,14 @@
 import { shopItems } from './catches.js';
 
 export const billyLines = [
-  "oh. it's you. I've seen you 'round the beach. catch anything good?",
-  'meow meow meow. ahem - sorry, I meant, what can i do for ya?',
+  "oh. it's you. i've seen you 'round the beach. catch anything good?",
+  'meow meow meow. ahem - sorry, i meant, what can i do for ya?',
   'hey there sailor! better have brought me a nice fish flavoured tip!',
-  'found some good stuff out there today. you should really have a look'
+  'found some good stuff out there today. you should really have a look',
+  'the tide brought in some cool stuff this morning. lucky for you, i got there first.',
+  'fresh stock, fair prices, and absolutely no haggling. unless you’ve got sardines. then we can haggle.',
+  "if you’re heading back out, don't forget to bring your sea legs with you.",
+  "i had a nap planned, but i guess i'll sell you stuff now."
 ];
 export const everydayIds = ['seaweed','sparkle','sea-glass','ribbon','cherry','mushroom'];
 const dailyIds = ['lucky-biscuit','sunset','moon-thread','moon','pink-tackle-box','dock-lantern','pennants','potted-plant','bubble-lamp','shell-arch','tiny-castle','pink-coral'];

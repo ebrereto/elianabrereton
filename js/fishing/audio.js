@@ -11,6 +11,20 @@ export class FishingAudio {
   }
   play(kind) {
     if (this.muted || !this.context || this.context.state !== 'running') return;
+    if (kind === 'meow') {
+      const start = this.context.currentTime;
+      const oscillator = this.context.createOscillator(), gain = this.context.createGain();
+      oscillator.type = 'triangle';
+      oscillator.frequency.setValueAtTime(720, start);
+      oscillator.frequency.exponentialRampToValueAtTime(430, start + .16);
+      oscillator.frequency.exponentialRampToValueAtTime(610, start + .3);
+      gain.gain.setValueAtTime(.001, start);
+      gain.gain.linearRampToValueAtTime(.055, start + .025);
+      gain.gain.exponentialRampToValueAtTime(.001, start + .34);
+      oscillator.connect(gain).connect(this.context.destination);
+      oscillator.start(start); oscillator.stop(start + .35);
+      return;
+    }
     const notes = {
       cast: [280, 190], splash: [180, 120], bite: [660, 880, 660], hook: [440, 560],
       pet: [659, 880, 1047],

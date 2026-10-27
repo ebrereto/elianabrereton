@@ -1,9 +1,9 @@
 import { catches, rods, living, spriteURL, discoveries, catchSize } from './catches.js';
-import { everydayIds, dailyStock, itemById, owned, buy, toggleDecor, coinReward, billyLines } from './shop.js?v=20261026-billy-portrait';
+import { everydayIds, dailyStock, itemById, owned, buy, toggleDecor, coinReward, billyLines } from './shop.js?v=20261027-billy-lines';
 import { createStore, freshSave } from './save.js?v=20261026-billy';
 import { FishingGame } from './game.js?v=20261026-billy';
-import { FishingAudio } from './audio.js?v=20261026-billy';
-import { Renderer, loadArt } from './renderer.js?v=20261026-billy';
+import { FishingAudio } from './audio.js?v=20261027-billy-meow';
+import { Renderer, loadArt } from './renderer.js?v=20261027-bite-clearance-fix';
 import { bindInput } from './input.js';
 import { renderCollection, showDetails } from './aquarium.js?v=20261023-aquarium-calm';
 const $ = selector => document.querySelector(selector);
@@ -13,7 +13,7 @@ export async function start() {
   let storage;
   try { storage = window.localStorage; } catch { storage = { getItem() { throw Error(); }, setItem() { throw Error(); }, removeItem() { throw Error(); } }; }
   const store = createStore(storage, message => { $('#save-warning').textContent = message; $('#save-warning').hidden = false; });
-  let save = store.load(), score = 0, view = 'fish', manualPaused = false, filter = 'all', time = 0, billyLine = -1;
+  let save = store.load(), score = 0, view = 'fish', manualPaused = false, filter = 'all', time = 0, billyLine = -1, billyReactionTimer = null, billyPetted = false;
   let confirmAction = null, focusBeforeDialog = null;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const audio = new FishingAudio(); audio.muted = save.muted;
@@ -55,10 +55,10 @@ export async function start() {
     beat('#beat-land',phase==='land'?'active':'upcoming');
     $('#beat-fight').textContent = game.fightTotal ? `fight ${Math.min(game.fightRound,game.fightTotal)}/${game.fightTotal}` : 'clean pull';
     if (phase === 'land') {
-      $('#timing-instruction').textContent = game.behavior==='treasure'?'one precise pull for the treasure':'one last pull — bring it home';
+      $('#timing-instruction').textContent = game.behavior==='treasure'?'one precise pull for the treasure':'one last pull. bring it home';
       $('#action').textContent = game.behavior==='treasure'?'perfect pull!':'land it!';
     } else {
-      $('#timing-instruction').textContent = game.behavior==='heavy'?'steady hands — this one is heavy':game.behavior==='fast'?'quick now — it keeps darting':game.behavior==='magic'?'the target has a mind of its own':'stop inside the striped zone';
+      $('#timing-instruction').textContent = game.behavior==='heavy'?'steady hands, this one is heavy':game.behavior==='fast'?'quick now, it keeps darting':game.behavior==='magic'?'the target has a mind of its own':'stop inside the striped zone';
       $('#action').textContent = 'pull!';
     }
     $('#meter').setAttribute('aria-description',`target from ${Math.round(game.target*100)} to ${Math.round((game.target+game.width)*100)} percent. ${phase==='land'?'make the final pull':'press space or pull inside the zone'}.`);
@@ -77,7 +77,7 @@ export async function start() {
     if (state === 'timing') {
       audio.play(game.lastResult==='perfect'?'perfect':game.lastResult==='miss'?'strain':game.lastResult==='hit'?'pull':'hook');
       fightUI();
-      $('#game-status').textContent = game.phase==='land'?'one last pull. bring it home.':`keep the line steady — pull ${game.fightRound} of ${game.fightTotal}.`;
+      $('#game-status').textContent = game.phase==='land'?'one last pull. bring it home.':`keep the line steady. pull ${game.fightRound} of ${game.fightTotal}.`;
     }
     if (state === 'reeling') audio.play(game.success?'land':'strain');
     if (state === 'caught') {
@@ -131,6 +131,16 @@ export async function start() {
     if (!item) return;
     audio.unlock().then(()=>audio.play('pet'));
     $('#aquarium-status').textContent = `${item.name} loved that. tiny heart!`;
+  });
+  $('#pet-billy').addEventListener('click',()=>{
+    audio.unlock().then(()=>audio.play('meow'));
+    const reaction=$('#billy-reaction'), alreadyPetted=billyPetted;
+    billyPetted=true;
+    reaction.textContent=alreadyPetted?'♥':'!';reaction.classList.toggle('is-heart',alreadyPetted);
+    $('#billy-says').textContent=alreadyPetted?'fine. you may pet the captain. just this once.':'hey! paws off the merchandise. and the shopkeeper.';
+    clearTimeout(billyReactionTimer);reaction.classList.remove('is-visible');void reaction.offsetWidth;reaction.classList.add('is-visible');
+    $('#billy-status').textContent=alreadyPetted?'billy accepts the pet with a tiny heart.':'billy gives you a surprised little meow.';
+    billyReactionTimer=setTimeout(()=>reaction.classList.remove('is-visible'),2000);
   });
   $('#pause').addEventListener('click',pause);$('#resume').addEventListener('click',()=>{manualPaused=false;syncPause();audio.unlock();$('#action').focus();});
   document.addEventListener('visibilitychange',()=>{ if(!document.hidden) { manualPaused=true; } syncPause(); });

@@ -268,9 +268,10 @@ export class Renderer {
 
       const controlX = state === 'casting' ? 142 : (tipX + bobX) / 2 - 9;
       const controlY = state === 'casting' ? Math.min(tipY, bobY) - 27 : (tipY + bobY) / 2 - 5;
-      curve(ctx, tipX, tipY, controlX, controlY, bobX, bobY, CREAM);
-
+      // A successful reel swaps the bobber for the catch below, so its line is
+      // drawn once to the fish instead of leaving a second strand to the water.
       if (!(state === 'reeling' && game.success)) {
+        curve(ctx, tipX, tipY, controlX, controlY, bobX, bobY, CREAM);
         rect(ctx, bobX - 3, bobY - 3, 6, 7, INK);
         const bobber={classic:['#ee8d82',CREAM],cherry:['#bd4769','#e7a5b4'],mushroom:['#b95b61','#fff0cf'],moon:['#eadc9a','#8aa0bd']}[save.bobber]||['#ee8d82',CREAM];
         rect(ctx, bobX - 2, bobY - 4, 4, 4, bobber[0]);rect(ctx, bobX - 2, bobY, 4, 3, bobber[1]);
@@ -283,13 +284,17 @@ export class Renderer {
 
     if (['bite', 'timing'].includes(state)) {
       const shadowX = bobX - 10 + Math.sin(t * 3) * 7;
-      fishShadow(ctx, shadowX, bobY + 18, '#397d88', Math.sin(t) > 0);
+      // Keep the hooked silhouette submerged in open water even as the bobber
+      // plunges; the dock begins at y=169.
+      const shadowY = Math.min(158, bobY + 15);
+      fishShadow(ctx, shadowX, shadowY, '#397d88', Math.sin(t) > 0);
     }
 
     if (state === 'reeling' && game.success && game.item) {
       const progress = Math.min(1, game.elapsed / 1.05);
-      const fishX = 168 + 65 * progress;
-      const fishY = 145 - Math.sin(progress * Math.PI) * 58 + progress * 22;
+      const fishX = 160 + 60 * progress;
+      // Begin fully above the dock edge, rise in a clean arc, then hang by the rod.
+      const fishY = 132 - Math.sin(progress * Math.PI) * 50 - progress * 25;
       curve(ctx, tipX, tipY, (tipX + fishX) / 2, fishY - 12, fishX + 16, fishY + 10, CREAM);
       ctx.drawImage(this.art.sprites[game.item.id], Math.round(fishX), Math.round(fishY), 32, 32);
       for (let index = 0; index < 6; index++) rect(ctx, 170 + index * 5, 146 - Math.sin(progress * 15 + index) * 5, 2, 2, '#b4e3d6');

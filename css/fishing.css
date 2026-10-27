@@ -139,3 +139,19 @@
 .billy-speech{left:40%;top:48px;width:31%;background:#fff8e8f2}
 @media(max-width:720px){.billy-speech{left:39%;width:34%;font-size:11px!important}.billy-counter{background-position:48% center}}
 @media(max-width:440px){.billy-speech{left:42%;top:42px;width:45%;font-size:10px!important}.billy-counter{background-position:44% center}}
+
+/* Billy's sign keeps its storybook serif; the shop itself speaks in the game's type. */
+.shop-sign span,.shop-sign strong,.shop-sign small{font-family:Georgia,'Times New Roman',serif}
+#tackle-view .billy-speech,#tackle-view .wood-counter,#tackle-view .shop-heading p,#tackle-view .shop-heading h3,#tackle-view .shop-card h4,#tackle-view .shop-card small,#tackle-view .odds summary{font-family:inherit!important}
+.fishing-shell button.billy-portrait{overflow:visible;min-height:0;padding:0;border:0;border-radius:0;background:transparent;cursor:pointer}
+.fishing-shell button.billy-portrait:hover{background:transparent}
+.fishing-shell button.billy-portrait:focus-visible{outline-offset:5px}
+.billy-reaction{position:absolute;z-index:6;top:-7px;left:53%;display:grid;width:34px;height:34px;place-items:center;color:#fff8e8;background:#c4778d;border:3px solid #304e60;border-radius:50% 50% 50% 8px;box-shadow:3px 4px 0 #304e6030;font-size:22px;font-weight:800;line-height:1;opacity:0;transform:translate(-50%,10px) rotate(-8deg) scale(.55);pointer-events:none}
+.billy-reaction.is-heart{width:30px;height:30px;background:#cf7f98;font-size:15px}
+.billy-reaction.is-visible{animation:billy-surprise 2s ease-out forwards}
+@keyframes billy-surprise{0%{opacity:0;transform:translate(-50%,10px) rotate(-8deg) scale(.55)}12%,70%{opacity:1;transform:translate(-50%,-9px) rotate(4deg) scale(1)}100%{opacity:0;transform:translate(-50%,-24px) rotate(-3deg) scale(.85)}}
+@media(prefers-reduced-motion:reduce){.billy-reaction.is-visible{animation:billy-surprise 2s linear forwards!important}}
+
+/* A softer paper speech bubble without the previous blue comic outline. */
+#tackle-view .billy-speech{border:0;background:#fffdf8;box-shadow:4px 5px 0 rgba(61,53,64,.16)}
+#tackle-view .billy-speech:after{left:-18px;bottom:15px;border:9px solid transparent;border-right-color:#fffdf8}

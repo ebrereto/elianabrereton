@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" href="./img/flower-favicon.png?v=20261022-flower">
   <link rel="stylesheet" href="./css/site.css?v=20261022-photo-motion">
   <script src="./js/site.js" defer></script>
-<link rel="stylesheet" href="./css/fishing.css?v=20261026-billy-interior"><script type="module" src="./js/fishing/main.js?v=20261026-billy-interior"></script>
+<link rel="stylesheet" href="./css/fishing.css?v=20261027-billy-easter-egg"><script type="module" src="./js/fishing/main.js?v=20261027-billy-easter-egg"></script>
 </head>
 <body class="page-fishing">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -83,8 +83,9 @@
   <section id="tackle-view" aria-label="tackle" hidden>
     <div class="shop-sign"><span>billy's</span><strong>tackle &amp; trinkets</strong><small>open daily, weather permitting</small></div>
     <div class="billy-counter">
-      <div class="billy-portrait"><img src="./assets/fishing/billy.png" alt="billy, a friendly orange sailor cat waving from behind the counter"></div>
-      <p id="billy-says" class="billy-speech">oh. it's you. I've seen you 'round the beach. catch anything good?</p>
+      <button class="billy-portrait" id="pet-billy" type="button" aria-label="say hello to billy the shopkeeper"><img src="./assets/fishing/billy.png?v=20261027-sailor" alt="billy, a scruffy grey-brown tabby sailor cat greeting you from behind the counter"><span class="billy-reaction" id="billy-reaction" aria-hidden="true">!</span></button>
+      <p id="billy-says" class="billy-speech">oh. it's you. i've seen you 'round the beach. catch anything good?</p>
+      <p id="billy-status" class="sr-only" role="status" aria-live="polite"></p>
       <div class="wood-counter"><strong><span aria-hidden="true">◉</span> <span id="shop-coins">0</span> shell coins</strong></div>
     </div>
     <div class="shop-heading"><div><h3>everyday tackle</h3></div><small>always in stock</small></div><div id="everyday-stock" class="shop-grid"></div>
